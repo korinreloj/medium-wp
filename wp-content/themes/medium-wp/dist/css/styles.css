@@ -3,3 +3,5 @@ div {
   div a {
     color: red;
     font-size: 12px; }
+
+.article-title { text-transform: uppercase; }
