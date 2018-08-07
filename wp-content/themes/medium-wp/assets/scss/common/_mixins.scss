@@ -6,7 +6,6 @@
  }
 }
 
-
 @mixin clearfix {
   &::after {
     content: '';
@@ -14,26 +13,6 @@
     clear: both;
   }
 }
-
-// delete this
-@mixin container {
-  padding-left: rem(32);
-  padding-right: rem(32);
-
-  @include breakpoint($tablet) {
-    padding-left: rem(51);
-    padding-right: rem(51);
-  }
-
-  @include breakpoint($desktop) {
-    max-width: $max;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: rem(100);
-    padding-right: rem(100);
-  }
-}
-
 
 @mixin img-cover {
   width: 100%;
