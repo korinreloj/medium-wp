@@ -1,7 +1,3 @@
-div {
-  margin: 0; }
-  div a {
-    color: red;
-    font-size: 12px; }
+.heading-1,.h1,.heading-2,.h2,.heading-3,.h3,.heading-4,.h4,.heading-5,.heading-5--i,.h5--i,.heading-5--blue,.h5--blue,.h5,.heading-6,.h6,.body-text,.body-text--sm,.body-text--smi,.body--smi,.body--sm,.body,.numeral,.numeral .link-text,.link{color:#333132;font-family:font("ibm-plex-sans", "default")}.heading-1,.h1{font-size:rem(48);font-weight:700;line-height:0.9}.heading-2,.h2{font-size:rem(40);font-weight:700;line-height:0.9}.heading-3,.h3{font-size:rem(24);font-weight:700;line-height:1;letter-spacing:rem(1)}.heading-4,.h4{font-size:rem(20);font-weight:700;line-height:1}.heading-5,.heading-5--i,.h5--i,.heading-5--blue,.h5--blue,.h5{font-size:rem(17);font-weight:400;line-height:1.3}.heading-5--i,.h5--i{font-style:italic}.heading-5--blue,.h5--blue{color:#2a9fbc}.heading-6,.h6{font-size:rem(34);font-weight:700;line-height:0.9}.body-text,.body-text--sm,.body-text--smi,.body--smi,.body--sm,.body{font-size:rem(15);font-weight:300;line-height:1.4}.body-text--sm,.body-text--smi,.body--smi,.body--sm{font-size:rem(13);font-weight:300;line-height:1.3}.body-text--smi,.body--smi{font-style:italic}.numeral{font-size:rem(50);font-weight:700;line-height:0.9}.numeral--serif{color:#333132;font-family:font("ibm-plex-serif", "default");font-size:rem(60);font-style:italic;font-weight:400;line-height:1}.link-text,.link{font-size:rem(8);font-weight:700;letter-spacing:rem(2);line-height:1.3;text-transform:uppercase}div{margin:0}div a{color:red;font-size:12px}
 
-.article-title { text-transform: uppercase; }
+/*# sourceMappingURL=styles.css.map */
