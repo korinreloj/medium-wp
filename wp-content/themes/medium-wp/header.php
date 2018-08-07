@@ -5,8 +5,10 @@
     <title><?php bloginfo('name'); ?></title>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/css/styles.css">
   </head>
-  <body>
-    
+  <body <?php body_class(); ?>>
+
   <header>
     HELLO, I'm header
   </header>
+
+  <main>
