@@ -1,3 +1,5 @@
+  </main>
+
   <footer>
     HELLO, I'm footer
   </footer>
