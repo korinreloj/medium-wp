@@ -1,60 +1,19 @@
-$color-black: #000;
-$color-black--mineshaft: #333132;
-$color-blue--eastern: #2a9fbc;
-$color-blue--eastern-hover: #217f96;
-$color-blue--eastern-dark: #2a9fbb;
-$color-blue--prussian: #003a51;
-$color-blue--prussian-hover: #002e41;
-$color-gray--alto: #d8d8d8;
-$color-gray--cod: #171717;
-$color-gray--dusty: #9b9b9b;
-$color-green--yellow: #bedb84;
-$color-orange--treepoppy: #f7941d;
-$color-orange--treepoppy-hover: #c67617;
-$color-red--shiraz: #a2092f;
-$color-silver: #ccc;
-$color-white: #fff;
-$color-white--chrome: #e5f1d0;
+$color-black: #000; 
+$color-green: #03a87c;
+$color-grey: #949494;
 
-$color-key: 'base' !default;
 
-$colorpalette: (
-  'black': (
-    'base': $color-black,
-    'mineshaft': $color-black--mineshaft
-  ),
-  'blue-eastern': (
-    'base': $color-blue--eastern,
-    'hover': $color-blue--eastern-hover
-  ),
-  'blue-eastern-dark': (
-    'base': $color-blue--eastern-dark
-  ),
-  'blue-prussian': (
-    'base': $color-blue--prussian,
-    'hover': $color-blue--prussian
-  ),
-  'gray': (
-    'base': $color-gray--alto,
-    'alto': $color-gray--alto,
-    'cod': $color-gray--cod,
-    'dusty': $color-gray--dusty,
-  ),
-  'green-yellow': (
-    'base': $color-green--yellow
-  ),
-  'orange-treepopy': (
-    'base': $color-orange--treepoppy,
-    'hover': $color-orange--treepoppy-hover
-  ),
-  'red-shiraz': (
-    'base': $color-red--shiraz
-  ),
-  'silver': (
-    'base': $color-silver
-  ),
-  'white': (
-    'base': $color-white,
-    'chrome': $color-white--chrome
-  )
-);
+
+// $color-key: ‘base’ !default;
+
+// $colorpalette: (
+//  'black-belt': (
+//    'base': $color-black
+//  ),
+//  'green': (
+//    'base': $color-green
+//  ),
+//  'grey': (
+//    'base': $color-grey,
+//  ),
+// );
