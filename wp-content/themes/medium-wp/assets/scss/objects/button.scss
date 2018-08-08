@@ -1,65 +1,64 @@
-.button {
-  @include who-button;
+// .button {
 
-  &--primary {
-    background-color: $color-orange--treepoppy;
-    color: $color-white;
+//   &--primary {
+//     background-color: $color-orange--treepoppy;
+//     color: $color-white;
 
-    &:hover,
-    &:active {
-      background-color: $color-orange--treepoppy-hover;
-      color: $color-white;
-    }
-  }
+//     &:hover,
+//     &:active {
+//       background-color: $color-orange--treepoppy-hover;
+//       color: $color-white;
+//     }
+//   }
 
-  &--secondary {
-    background-color: $color-blue--prussian;
-    color: $color-white;
+//   &--secondary {
+//     background-color: $color-blue--prussian;
+//     color: $color-white;
 
-    &:hover,
-    &:active {
-      background-color: $color-blue--prussian-hover;
-      color: $color-white;
-    }
-  }
+//     &:hover,
+//     &:active {
+//       background-color: $color-blue--prussian-hover;
+//       color: $color-white;
+//     }
+//   }
 
-  &--tertiary {
-    background-color: $color-blue--eastern;
-    color: $color-white;
+//   &--tertiary {
+//     background-color: $color-blue--eastern;
+//     color: $color-white;
 
-    &:hover,
-    &:active {
-      background-color: $color-blue--eastern-hover;
-      color: $color-white;
-    }
-  }
+//     &:hover,
+//     &:active {
+//       background-color: $color-blue--eastern-hover;
+//       color: $color-white;
+//     }
+//   }
 
-  &--error {
-    background-color: $color-red--shiraz;
-    color: $color-white;
+//   &--error {
+//     background-color: $color-red--shiraz;
+//     color: $color-white;
 
-    &:hover,
-    &:active {
-      background-color: $color-red--shiraz;
-      color: $color-white;
-    }
-  }
+//     &:hover,
+//     &:active {
+//       background-color: $color-red--shiraz;
+//       color: $color-white;
+//     }
+//   }
 
-  &:disabled {
-    background-color: $color-gray--alto;
-  }
+//   &:disabled {
+//     background-color: $color-gray--alto;
+//   }
 
-  .icon {
-    margin-right: rem(4);
-    font-size: rem(9);
-    vertical-align: middle;
+//   .icon {
+//     margin-right: rem(4);
+//     font-size: rem(9);
+//     vertical-align: middle;
 
-    @include breakpoint($tablet) {
-      font-size: rem(12);
-    }
+//     @include breakpoint($tablet) {
+//       font-size: rem(12);
+//     }
 
-    @include breakpoint($desktop) {
-      font-size: rem(14);
-    }
-  }
-}
+//     @include breakpoint($desktop) {
+//       font-size: rem(14);
+//     }
+//   }
+// }
