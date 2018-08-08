@@ -4,4 +4,3 @@
  @include 'featured-content.php';
 ?>
 <?php get_footer(); ?>
-
