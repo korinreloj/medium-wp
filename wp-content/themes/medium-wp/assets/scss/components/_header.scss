@@ -1,0 +1,16 @@
+.header {
+
+  &__content {
+    display: flex;
+    padding-right: rem(20);
+    padding-left: rem(20);
+    margin-bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+	}
+
+  &__link-right, h1 {
+    margin: 0;
+    padding-top: rem(10);
+  }
+}

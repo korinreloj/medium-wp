@@ -3,12 +3,12 @@
 
 .article-page {
   h1 {
-    font-family: font('Open Sans', sans-serif, 'default');
+    font-family: font('ibm-plex-sans', 'default');
     font-weight: 700;
     font-size: rem(20);
     line-height: rem(20);
     letter-spacing: 0;
-    color: color('black');
+    color: color('blue-prussian');
     margin-top: 0;
     margin-bottom: rem(15);
 
@@ -20,12 +20,12 @@
   }
 
   h2 {
-    font-family: font('Open Sans', sans-serif, 'default');
+    font-family: font('ibm-plex-sans', 'default');
     font-weight: 700;
     font-size: rem(15);
     line-height: rem(15);
     letter-spacing: rem(1);
-    color: color('black');
+    color: color('blue-prussian');
     margin-top: 0;
     margin-bottom: rem(15);
     text-transform: uppercase;
@@ -40,12 +40,12 @@
   p,
   .body-text,
   .return__link__container {
-    font-family: font('Lora', serif, 'default');
+    font-family: font('ibm-plex-sans', 'default');
     font-size: rem(15);
     font-weight: 300;
     line-height: rem(21);
     letter-spacing: 0;
-    color: color('black');
+    color: color('black', 'mineshaft');
     margin-top: 0;
     margin-bottom: rem(25);
 
@@ -166,7 +166,7 @@
             content: "0" counter(li);
             position: absolute;
             right: calc(100% + #{rem(5)});
-            font-family: font('Open Sans', sans-serif 'default');
+            font-family: font('ibm-plex-sans', 'default');
             color: color('blue-eastern');
             font-size: rem(15);
             line-height: rem(15);
