@@ -34,7 +34,4 @@
 
 <?php endforeach; ?>
 
-
-
-
 <?php endif; get_footer(); ?>

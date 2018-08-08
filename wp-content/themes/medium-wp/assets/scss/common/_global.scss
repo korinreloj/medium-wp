@@ -1,0 +1,63 @@
+// https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+* {
+  box-sizing: inherit;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+// Prevent iOS text size adjust after orientation change, without disabling user zoom.
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+// a {
+//   color: $color-green;
+//   text-decoration: none;
+// }
+
+img {
+  max-width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+// .lazyload,
+// .lazyloading {
+//   opacity: 0;
+// }
+
+// .lazyloaded {
+//   opacity: 1;
+// }
+
+// .no-scroll {
+//   overflow: hidden;
+// }
+
+// .wrapper {
+//   margin-top: rem(-89);
+
+//   @include breakpoint($tablet) {
+//     margin-top: rem(-93);
+//     min-height: rem(700);
+//   }
+
+//   @include breakpoint($desktop) {
+//     margin-top: rem(-105);
+//   }
+// }
+
+// // .container {
+// //   @include container;
+// // }

@@ -1,5 +1,4 @@
 
-
 <?php get_header(); if(have_posts()): the_post(); ?>
 
 <?php
@@ -24,7 +23,6 @@
 
   <img src="<?php echo $inline_image_large['url']; ?>" alt="">
 
-  <div class="article-embed"> <?php echo $embed; ?> </div>
   <div class="article-content">
     <?php /*the_content(); */?>
   </div>

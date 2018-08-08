@@ -1,0 +1,22 @@
+// .btn {
+//   display: inline-block;
+//   font-family: font('ibm-plex-sans', 'default');
+//   line-height: normal;
+//   letter-spacing: 2px;
+//   color: $color-white;
+//   text-transform: uppercase;
+//   border-radius: 3px;
+//   border: 0;
+  
+//   @include responsive(
+//     ( font-size, rem(8), rem(10), rem(12) ),
+//     ( padding-top, rem(10), rem(10), rem(15) ),
+//     ( padding-bottom, rem(10), rem(10), rem(15) ),
+//     ( padding-left, rem(15), rem(15), rem(20) ),
+//     ( padding-right, rem(15), rem(15), rem(20) )
+//   );
+
+//   &--orange {
+//     background: $color-orange--treepoppy;
+//   }
+// }

@@ -1,0 +1,281 @@
+$open-sans: 'Open Sans', sans-serif;
+$lora-serif: 'Lora', serif;
+
+$fonts: (
+ open-sans: (
+   default: '"Open Sans", sans-serif'
+ ),
+ lora-serif: (
+   default: '"Lora", serif'
+ ),
+);
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-black;
+  font-family: font('open-sans', 'default');
+}
+
+h1 {
+  font-size: rem(40);
+  font-weight: rem(400);
+
+  @include tablet{
+    font-size: rem(42);
+  }
+
+  @include desktop{
+    font-size: rem(60);
+  }
+}
+
+h2 {
+  font-size: rem(30);
+  font-weight: rem(400);
+
+  @include tablet{
+    font-size: rem(32);
+  }
+
+  @include desktop{
+    font-size: rem(50);
+  }
+}
+
+h3 {
+  font-size: rem(25);
+  font-weight: rem(400);
+
+  @include tablet{
+    font-size: rem(27);
+  }
+
+  @include desktop{
+    font-size: rem(36);
+  }
+}
+
+h4 {
+  font-size: rem(20);
+  font-weight: 700;
+  line-height: 1;
+
+  @include breakpoint('desktop') {
+    font-size: rem(30);
+  }
+}
+
+h5 {
+  font-size: rem(17);
+  font-weight: 400;
+  line-height: 1.3;
+
+  @include breakpoint('tablet') {
+    font-size: rem(18);
+  }
+
+  @include breakpoint('desktop') {
+    font-size: rem(21);
+  }
+}
+
+h6 {
+  font-size: rem(34);
+  font-weight: 700;
+  line-height: 0.9;
+
+  @include breakpoint('desktop') {
+    font-size: rem(50);
+  }
+}
+
+p{
+  font-size: rem(16);
+}
+
+.header-link {
+  color: $color-green;
+  font-size: rem(8);
+  font-weight: 700;
+  letter-spacing: rem(2);
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.category-nav-link{
+  font-family: font('open-sans', 'default');
+  font-size: rem(15);
+
+  @include desktop{
+    font-size: rem(16);
+  }
+}
+
+
+// .heading-1, .h1,
+// .heading-2, .h2,
+// .heading-3, .h3,
+// .heading-4, .h4,
+// .heading-5, .h5,
+// .heading-6, .h6,
+// .body-text, .body,
+// .numeral, .numeral
+// .link-text, .link {
+//   color: $color-black--mineshaft;
+//   font-family: font('ibm-plex-sans', 'default');
+// }
+
+// .heading-1, .h1 {
+//   font-size: rem(48);
+//   font-weight: 700;
+//   line-height: 0.9;
+
+//   @include breakpoint('tablet') {
+//     font-size: rem(50);
+//   }
+
+//   @include breakpoint('desktop') {
+//     font-size: rem(72);
+//   }
+// }
+
+// .heading-2, .h2 {
+//   font-size: rem(40);
+//   font-weight: 700;
+//   line-height: 0.9;
+
+//   @include breakpoint('desktop') {
+//     font-size: rem(65);
+//   }
+// }
+
+// .heading-3, .h3 {
+//   font-size: rem(24);
+//   font-weight: 700;
+//   line-height: 1;
+//   letter-spacing: rem(1);
+
+//   @include breakpoint('tablet') {
+//     font-size: rem(26);
+//   }
+
+//   @include breakpoint('desktop') {
+//     font-size: rem(36);
+//   }
+// }
+
+// .heading-4, .h4 {
+//   font-size: rem(20);
+//   font-weight: 700;
+//   line-height: 1;
+
+//   @include breakpoint('desktop') {
+//     font-size: rem(30);
+//   }
+// }
+
+// .heading-5, .h5 {
+//   font-size: rem(17);
+//   font-weight: 400;
+//   line-height: 1.3;
+
+//   @include breakpoint('tablet') {
+//     font-size: rem(18);
+//   }
+
+//   @include breakpoint('desktop') {
+//     font-size: rem(21);
+//   }
+
+//   &--i {
+//     @extend .heading-5;
+//     font-style: italic;
+//   }
+
+//   &--blue {
+//     @extend .heading-5;
+//     color: $color-blue--eastern;
+//   }
+// }
+
+// .heading-6, .h6 {
+//   font-size: rem(34);
+//   font-weight: 700;
+//   line-height: 0.9;
+
+//   @include breakpoint('desktop') {
+//     font-size: rem(50);
+//   }
+// }
+
+// .body-text, .body {
+//   font-size: rem(15);
+//   font-weight: 300;
+//   line-height: 1.4;
+
+//   @include breakpoint('desktop') {
+//     font-size: rem(18);
+//   }
+
+//   &--sm {
+//     @extend .body-text;
+//     font-size: rem(13);
+//     font-weight: 300;
+//     line-height: 1.3;
+
+//     @include breakpoint('desktop') {
+//       font-size: rem(15);
+//     }
+//   }
+
+//   &--smi {
+//     @extend .body-text--sm;
+//     font-style: italic;
+//   }
+// }
+
+// .numeral {
+//   font-size: rem(50);
+//   font-weight: 700;
+//   line-height: 0.9;
+
+//   @include breakpoint('tablet') {
+//     font-size: rem(30);
+//   }
+
+//   @include breakpoint('desktop') {
+//     font-size: rem(50);
+//   }
+
+//   &--serif {
+//     color: $color-black--mineshaft;
+//     font-family: font('ibm-plex-serif', 'default');
+//     font-size: rem(60);
+//     font-style: italic;
+//     font-weight: 400;
+//     line-height: 1;
+
+//     @include breakpoint('tablet') {
+//       font-size: rem(65);
+//     }
+
+//     @include breakpoint('desktop') {
+//       font-size: rem(96);
+//     }
+//   }
+// }
+
+
+
+//   @include breakpoint('tablet') {
+//     font-size: rem(10);
+//   }
+
+//   @include breakpoint('desktop') {
+//     font-size: rem(12);
+//   }
+// }
