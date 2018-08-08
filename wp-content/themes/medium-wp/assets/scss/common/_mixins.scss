@@ -21,19 +21,19 @@
 }
 
 @mixin mobile {
-  @include breakpoint($mobile) {
+  @include breakpoint('mobile') {
     @content;
   }
 }
 
 @mixin tablet {
-  @include breakpoint($tablet) {
+  @include breakpoint('tablet') {
     @content;
   }
 }
 
 @mixin desktop {
-  @include breakpoint($desktop) {
+  @include breakpoint('desktop') {
     @content;
   }
 }
