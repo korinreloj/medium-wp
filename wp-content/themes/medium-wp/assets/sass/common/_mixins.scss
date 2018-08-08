@@ -1,0 +1,224 @@
+@mixin who-button {
+  display: inline-block;
+  padding: rem(10 15);
+  border: 0;
+  border-radius: rem(3);
+  color: $color-black--mineshaft;
+  font-family: font('ibm-plex-sans', 'default');
+  font-size: 8px;
+  font-weight: bold;
+  line-height: 1.3;
+  letter-spacing: rem(2);
+  text-transform: uppercase;
+  transition: background-color 250ms ease, color 250ms ease;
+
+  @include breakpoint($tablet) {
+    padding: rem(10 15);
+    font-size: rem(10);
+    letter-spacing: rem(1.7);
+  }
+
+  @include breakpoint($desktop) {
+    padding: rem(15 20);
+    font-size: rem(12);
+    letter-spacing: rem(2);
+  }
+
+  &:hover,
+  &:active {
+    color: $color-blue--eastern;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin container {
+  padding-left: rem(32);
+  padding-right: rem(32);
+
+  @include breakpoint($tablet) {
+    padding-left: rem(51);
+    padding-right: rem(51);
+  }
+
+  @include breakpoint($desktop) {
+    max-width: $max;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: rem(100);
+    padding-right: rem(100);
+  }
+}
+
+@mixin container-fluid {
+  margin-left: (32 / $_mobile * 100%);
+  margin-right: (32 / $_mobile * 100%);
+
+  @include breakpoint($tablet) {
+    margin-left: (51 / $_tablet * 100%);
+    margin-right: (51 / $_tablet * 100%);
+  }
+
+  @include breakpoint($desktop) {
+    margin-left: (100 / $_desktop * 100%);
+    margin-right: (100 / $_desktop * 100%);
+  }
+
+  @include breakpoint($max) {
+    width: $max;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@mixin container-compressed-fluid {
+  padding-left: rem(32);
+  padding-right: rem(32);
+
+  @include breakpoint($tablet) {
+    padding-left: rem(87);
+    padding-right: rem(87);
+  }
+
+  @include breakpoint($desktop) {
+    max-width: $max;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: rem(160);
+    padding-right: rem(160);
+  }
+}
+
+@mixin img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@mixin pattern {
+  position: absolute;
+  z-index: -1;
+  width: rem(400);
+  height: rem(400);
+  background: url('../images/square-dot-pattern.svg') repeat;
+}
+
+@mixin pattern-no-dimension{
+  position: absolute;
+  z-index: -1;
+  background: url('../images/square-dot-pattern-blue.svg') repeat;
+}
+
+@mixin pattern-blue {
+  @include pattern;
+  background: url('../images/square-dot-pattern-blue.svg') repeat;
+}
+
+@mixin line {
+  position: absolute;
+  z-index: -1;
+  width: rem(200);
+  height: rem(200);
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: rem(2);
+    background-color: $color-green--yellow;
+    transform: rotate(45deg);
+    transform-origin: top left;
+  }
+}
+
+@mixin tablet {
+  @include breakpoint($tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include breakpoint($desktop) {
+    @content;
+  }
+}
+
+@mixin max {
+  @include breakpoint($max) {
+    @content;
+  }
+}
+
+@mixin mobile-down {
+  @media screen and (max-width: $tablet - 1 ) {
+    @content;
+  }
+}
+
+/*------------------------------------------------------------------*\
+  RESPONSIVE PROPERTY HANDLER
+    handles the per-breakpoint property
+    note: requires a key-less 'breakpointsMap' scss map
+          can use the 'rem' function,
+          only for mobile-first approach
+    usage:
+      @include responsive(
+        (display, none, block, flex),
+        (margin-top, null, 10px, 20px)
+      );
+\*------------------------------------------------------------------*/
+@mixin responsive($args...) {
+  @for $i from 1 through length($breakpointsMap) { // loop through all the breakpoints
+    @if $i == 1 { // if the loop is in the smallest breakpoint
+      @for $j from 1 through length($args) { // loop through all the properties
+        @if( #{nth(nth($args, $j), 2)} != null ) {
+          #{nth(nth($args, $j), 1)} : #{nth(nth($args, $j), 2)}; // apply value to the property
+        }
+      }
+    } @else { // if the loop is not in the smallest breakpoint
+      @media (min-width: #{nth($breakpointsMap, $i)}) { // set mediq query
+        @for $j from 1 through length($args) { // loop through all the properties
+          @if $i < length(nth($args, $j)) { // check if the number of values is less than the number of breakpoints
+            @if( #{nth(nth($args, $j), $i+1)} != null ) {
+              #{nth(nth($args, $j), 1)} : #{nth(nth($args, $j), $i+1)}; // apply value to the property
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//-----------------------------------------------------------------------
+//  ASPECT-RATIO
+//  usage:
+//    @include aspect-ratio($width, $height)
+//-----------------------------------------------------------------------
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  > * {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    overflow: hidden;
+    // z-index: -1;
+  }
+}

@@ -1,4 +1,6 @@
-
+<?php
+  //include 'single.php';
+?>
 
 <?php get_header(); if(have_posts()): the_post(); ?>
 
@@ -14,6 +16,11 @@
   $last_name = get_the_author_meta('last_name');
   $description = get_the_author_meta('description');
   $profile_picture = get_avatar('ID');
+
+  $breaker_image = get_field('breaker_image');
+  $breaker_title = get_field('breaker_title');
+  $cta_description = get_field('description');
+  $cta_link = get_field('cta_link');
 ?>
 
   <img src="<?php echo $hero_image['url']; ?>" alt="">
@@ -24,18 +31,18 @@
 
   <img src="<?php echo $inline_image_large['url']; ?>" alt="">
 
-  <div class="article-embed"> <?php echo $embed; ?> </div>
+
   <div class="article-content">
     <?php /*the_content(); */?>
   </div>
 
-  <footer>
-    <?php echo "$profile_picture"; ?>
-    <br>
-    <?php echo "$first_name $last_name"; ?>
-    <br>
-    <?php echo "$description"; ?>
+  <div class="breaker">
+    <p class="article-description">
+      <img src="<?php echo $breaker_image['url']; ?>" alt="">
+      <br>
+      <?php echo "$breaker_title $cta_description"; ?>
+    </p>
+  </div>
 
-  </footer>
 
 <?php endif; get_footer(); ?>
