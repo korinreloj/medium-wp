@@ -1,0 +1,36 @@
+.button {
+
+  &--primary {
+    background-color: $color-white;
+    color: $color-green;
+
+    &:hover,
+    &:active {
+		background-color: $color-white;
+	    color: $color-green-hover;
+    }
+    
+  }
+
+  &--secondary {
+    background-color: $color-black;
+    color: $color-white;
+
+    &:hover,
+    &:active {
+      background-color: $color-green-hover;
+      color: $color-white;
+    }
+  }
+
+  &--tertiary {
+    background-color: $color-white;
+    color: $color-white;
+
+    &:hover,
+    &:active {
+      background-color: $color-white;
+      color: $color-whiite;
+    }
+  }
+}
