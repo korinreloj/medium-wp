@@ -1,4 +1,9 @@
 .header {
+  max-width: (1000);
+
+  @include desktop {
+    margin-right: 0;
+  }
 
   &__content {
     display: flex;
@@ -9,8 +14,76 @@
     justify-content: space-between;
 	}
 
-  &__link-right, h1 {
-    margin: 0;
-    padding-top: rem(10);
+  &__link-left, h1 {
+
+    @include desktop{
+      margin: 0;
+      padding-top: rem(10);
+    }
+  }
+
+  &__link-left {
+    display: none;
+    color: #949494;
+
+    &:hover {
+      color: #000;
+    }
+
+    @include desktop {
+      display: block;
+    }
+  }  
+
+  &__link-right {
+    display: none;
+    color: #03a87c;
+
+    &:hover {
+      border-color: #03966f;
+      color: #03966f;
+    }
+
+    @include desktop {
+      display: inline-block;
+      margin-right: rem(16);
+    }
+  }
+
+  &__button {
+    width: rem(100);
+    padding: rem(10);
+    margin: rem(10);
+    cursor: pointer;
+    font-size: rem(12);
+    border-radius: rem(5);
+    border-color: #03a87c;
+    color: #03a87c;
+
+    &:hover {
+      border-color: #03966f;
+      color: #03966f;
+    }
+  }
+
+  h1 {
+    @include desktop {
+      text-align: center;
+    }
+  }
+
+  a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: rem(13);
+    text-decoration: none;
+  }
+
+  .fa-search {
+    margin-right: rem(12);
+    color: #949494;
+
+    @include desktop {
+      margin-right: rem(16);
+    }
   }
 }
