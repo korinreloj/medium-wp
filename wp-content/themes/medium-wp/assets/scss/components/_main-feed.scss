@@ -1,0 +1,120 @@
+.main-feed {
+	padding: rem(20);
+
+	@include tablet {
+		width: percentage(10/15);
+	}
+
+	@include desktop {
+		width: percentage(10/15);
+	}
+
+	&__nav {
+		margin-top: rem(48);
+		margin-right: rem(20);
+		margin-left: rem(20);
+		font-size: rem(12);
+		font-family: 'Open Sans', sans-serif;
+
+		@include tablet {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	&__heading {
+		display: flex;
+		align-items: center;
+		border-bottom: rem(1) solid rgba(0, 0, 0, .15);
+		justify-content: space-between;
+		
+		@include tablet {
+			margin-left: 0;
+		}
+
+		@include desktop {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		text-transform: uppercase;
+		color: gray;
+	}
+
+	&__container {
+		display: flex;
+		margin-top: rem(20);
+		margin-right: 0;
+
+		@include desktop {
+			margin-bottom: rem(40);
+		}
+	}
+
+	&__content {
+		margin-right: rem(24);
+		opacity: 0.8;
+		color: black;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: rem(20);
+	}
+
+	&__author-content {
+		width: 90%;
+	}
+
+	&__details-container {
+		display: flex;
+
+		@include tablet {
+
+		}
+
+		@include desktop {
+			display: flex;
+		}
+	}
+
+	&__header-title {
+		padding-bottom: rem(15);
+		margin-bottom: rem(-1);
+		border-bottom: rem(1) solid rgba(0, 0, 0, .54);
+		font-size: rem(18);
+	}
+
+	&__image {
+		margin: 0;
+
+		@include desktop {
+			margin-right: 0;
+		}
+	}
+
+	img {
+		display: flex;
+		max-width: rem(80);
+		margin-right: rem(0);
+
+		@include tablet {
+			max-width: rem(140);
+			margin-right: 0;
+		}
+	}
+
+	p {
+		margin: 0;
+		font-size: rem(13);
+		font-family: 'Open Sans', sans-serif;
+		color: gray;
+	}
+	
+	a {
+		text-decoration: none;
+	}
+}
