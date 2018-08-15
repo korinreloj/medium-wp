@@ -6,6 +6,7 @@
 	}
 
 	@include desktop {
+		margin-right: rem(20);
 		width: percentage(10/15);
 	}
 
@@ -39,7 +40,7 @@
 
 	&__link {
 		text-transform: uppercase;
-		color: gray;
+		color: $color-grey;
 	}
 
 	&__container {
@@ -55,7 +56,7 @@
 	&__content {
 		margin-right: rem(24);
 		opacity: 0.8;
-		color: black;
+		color: $color-black;
 		font-family: 'Open Sans', sans-serif;
 	}
 
@@ -71,14 +72,7 @@
 
 	&__details-container {
 		display: flex;
-
-		@include tablet {
-
-		}
-
-		@include desktop {
-			display: flex;
-		}
+		margin-top: rem(15);
 	}
 
 	&__header-title {
@@ -89,11 +83,8 @@
 	}
 
 	&__image {
+		height: 100%;
 		margin: 0;
-
-		@include desktop {
-			margin-right: 0;
-		}
 	}
 
 	img {
@@ -110,11 +101,6 @@
 	p {
 		margin: 0;
 		font-size: rem(13);
-		font-family: 'Open Sans', sans-serif;
-		color: gray;
-	}
-	
-	a {
-		text-decoration: none;
+		color: $color-grey;
 	}
 }

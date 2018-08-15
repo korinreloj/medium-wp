@@ -2,15 +2,15 @@
 <section class="main-feed">
   <div class="main-feed__nav">
   	<div class="main-feed__heading">
-  		<h2 class="main-feed__header-title">Featured for members</h2>
-  		<a href class="main-feed__link">More ></a>
+  		<h3 class="main-feed__header-title">Featured for members</h3>
+  		<a href class="main-feed__link">More <i class="fa fa-chevron-right"></i></a>
   	</div>
   </div>
 
   <a href="#0">
   <article class="main-feed__container">
   	<div class="main-feed__content">
-    	<h2 class="main-feed__title">History is Repeating Itself for Asian Americans Under Trump</h2>
+    	<h3 class="main-feed__title">History is Repeating Itself for Asian Americans Under Trump</h3>
     	<p>The 'model minority' myth obsecures decades of discrimination. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit doloremque accusamus id dolorem provident. Iure aliquam sapiente fugiat veritatis quia eaque accusantium magnam eius, praesentium, eum sit cum minus aperiam!</p>
 
     <div class="main-feed__details-container">
@@ -33,7 +33,7 @@
   <a href="#0">
   <article class="main-feed__container">
     <div class="main-feed__content">
-      <h2 class="main-feed__title">History is Repeating Itself for Asian Americans Under Trump</h2>
+      <h3 class="main-feed__title">History is Repeating Itself for Asian Americans Under Trump</h3>
       <p>The 'model minority' myth obsecures decades of discrimination. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam eligendi unde ducimus, ex quam hic nobis. Soluta, incidunt, optio rem molestias expedita tempore ipsum aliquid harum aliquam numquam eius beatae.</p>
 
     <div class="main-feed__details-container">
@@ -56,15 +56,15 @@
 
   <div class="main-feed__nav">
   	<div class="main-feed__heading">
-  		<h2 class="main-feed__header-title">Technology</h2>
-  		<a href class="main-feed__link">More ></a>
+  		<h3 class="main-feed__header-title">Technology</h3>
+  		<a href class="main-feed__link">More <i class="fa fa-chevron-right"></i></a>
   	</div>
   </div>
 
   <a href="#0">
   <article class="main-feed__container">
     <div class="main-feed__content">
-      <h2 class="main-feed__title">History is Repeating Itself for Asian Americans Under Trump</h2>
+      <h3 class="main-feed__title">History is Repeating Itself for Asian Americans Under Trump</h3>
       <p>The 'model minority' myth obsecures decades of discrimination. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sunt cum necessitatibus labore recusandae ad, neque! Facilis quasi quos, veritatis deserunt culpa sed, magnam, cum dolor reprehenderit distinctio adipisci magni.</p>
 
     <div class="main-feed__details-container">
@@ -83,11 +83,11 @@
     </figure>
   </article>
   </a>
-  <a href="#0">
+    <a href="#0">
   <article class="main-feed__container">
     <div class="main-feed__content">
-      <h2 class="main-feed__title">History is Repeating Itself for Asian Americans Under Trump</h2>
-      <p>The 'model minority' myth obsecures decades of discrimination</p>
+      <h3 class="main-feed__title">History is Repeating Itself for Asian Americans Under Trump</h3>
+      <p>The 'model minority' myth obsecures decades of discrimination. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sunt cum necessitatibus labore recusandae ad, neque! Facilis quasi quos, veritatis deserunt culpa sed, magnam, cum dolor reprehenderit distinctio adipisci magni.</p>
 
     <div class="main-feed__details-container">
       <div class="main-feed__author-content">
@@ -105,4 +105,5 @@
     </figure>
   </article>
   </a>
+  
 </section>
