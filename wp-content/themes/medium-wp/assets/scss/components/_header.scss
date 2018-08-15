@@ -1,4 +1,17 @@
 .header {
+  width: 100%;
+  background-color: #008CFF;
+  position: fixed;
+  transition: transform 0.4s ease;
+
+  &.is-hidden {
+    transform: translateY(-60px);
+  }
+
+  @include desktop {
+    top: 0;
+    margin-right: 0;
+  }
 
   &__content {
     display: flex;
@@ -7,10 +20,92 @@
     margin-bottom: 0;
     align-items: center;
     justify-content: space-between;
-	}
 
-  &__link-right, h1 {
-    margin: 0;
-    padding-top: rem(10);
+    @include desktop {
+      margin-right: rem(120);
+      margin-left: rem(120);
+    }
+  }
+
+  &__link-left, h1 {
+
+    @include desktop {
+      margin: 0;
+      padding-top: rem(10);
+    }
+  }
+
+  &__link-left {
+    display: none;
+    color: $color-grey;
+
+    &:hover {
+      color: $color-black;
+    }
+
+    @include tablet {
+      display: block;
+    }
+
+    @include desktop {
+      display: block;
+    }
+  }  
+
+  &__link-right {
+    display: none;
+    color: $color-green;
+
+    &:hover {
+      border-color: $color-green-hover;
+      color: $color-green-hover;
+    }
+
+    @include tablet {
+      display: inline-block;
+    }
+
+    @include desktop {
+      display: inline-block;
+      margin-right: rem(16);
+    }
+  }
+
+  &__button {
+    width: rem(100);
+    padding: rem(10);
+    margin: rem(10);
+    cursor: pointer;
+    font-size: rem(12);
+    border-radius: rem(5);
+    border-color: $color-green;
+    color: $color-green;
+
+    &:hover {
+      border-color: $color-green-hover;
+      color: $color-green-hover;
+    }
+  }
+
+  h1 {
+    @include desktop {
+      text-align: center;
+      font-size: rem(20);
+    }
+  }
+
+  a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: rem(13);
+    text-decoration: none;
+  }
+
+  .fa-search {
+    margin-right: rem(12);
+    color: $color-grey;
+
+    @include desktop {
+      margin-right: rem(16);
+    }
   }
 }
