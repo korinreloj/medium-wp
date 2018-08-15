@@ -1,11 +1,11 @@
 // Common
-@import 'common/colors';
 @import 'common/breakpoint';
+@import 'common/functions';
 @import 'common/mixins';
+@import 'common/colors';
 @import 'common/typography';
 @import 'common/text';
 @import 'common/global';
-@import 'common/functions';
 // @import 'common/buttons';
 
 // Objects
@@ -13,7 +13,10 @@
 
 
 // Components
-@import 'hero';
-@import 'components/category-nav';
-@import 'components/feature-content';
+@import 'components/article';
+@import 'components/hero';
 @import 'components/header';
+@import 'components/main-feed';
+@import 'components/feed-sidebar';
+@import 'components/front-page';
+@import 'components/footer';
