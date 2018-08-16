@@ -18,7 +18,7 @@
   <body <?php body_class(); ?> >
     
   <header class="header">
-  	<div class="header__content">
+    <div class="header__content">
       <a class="header__link-left" href="#0">Become a member</a>
       <h1>Medium</h1>
 
