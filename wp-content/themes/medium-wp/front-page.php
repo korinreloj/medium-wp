@@ -1,14 +1,15 @@
-<?php get_header() ?>
+<?php get_header(); ?>
 
-<?php @include 'category-nav.php' ?>
-<?php @include 'featured-content.php' ?>
-<?php #@include 'hero.php' ?>
+<section class="featured-content">
+<?php
+  $featured_articles = get_field('featured_articles');
+  foreach($featured_articles as $article):
+?>
+  <h1>
+    <a href="<?php echo $article->guid; ?>"><?php echo $article->post_title; ?></a>
+  </h1>
+<?php endforeach; ?>
+</section>
 
-<div class="content">
-	<?php #@include 'main-feed.php' ?>
-	<?php #@include 'feed-sidebar.php' ?>
-</div>
-
-<?php @include 'article.php' ?>
-
-<?php get_footer(); ?>
+<?php get_footer();
+?>
