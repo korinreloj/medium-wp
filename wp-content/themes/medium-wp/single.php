@@ -6,36 +6,32 @@
   $title = get_the_title();
   $hero_image = get_field('hero_image');
   $sub_title = get_field('sub_title');
-  $text_block = get_field('text_block');
-  $inline_image_large = get_field('inline_image_large');
-  $inline_image_full = get_field('inline_image_full');
-  $embed = get_field('oembed');
-  $first_name = get_the_author_meta('first_name');
-  $last_name = get_the_author_meta('last_name');
-  $description = get_the_author_meta('description');
-  $profile_picture = get_avatar('ID');
+  $heading_text= get_field('heading_text');
 ?>
 
   <img src="<?php echo $hero_image['url']; ?>" alt="">
 
   <h1 class="article-title"><?php echo $title; ?></h1>
   <h2 class="article-subtitle"><?php echo $sub_title; ?></h2>
-  <p class="article-textblock"><?php echo $text_block; ?></p>
 
-  <img src="<?php echo $inline_image_large['url']; ?>" alt="">
+  <?php echo $heading_text; ?>
 
-  <div class="article-embed"> <?php echo $embed; ?> </div>
-  <div class="article-content">
-    <?php /*the_content(); */?>
-  </div>
+  <?php //echo $flexible_content_field; ?>
+  <?php
+    $modules= get_field('flexible_content_field');
+  ?>
 
-  <footer>
-    <?php echo "$profile_picture"; ?>
-    <br>
-    <?php echo "$first_name $last_name"; ?>
-    <br>
-    <?php echo "$description"; ?>
+<?php foreach($modules as $content): var_dump($content); ?>
 
-  </footer>
+  <h2><?php echo $content['heading_text']; ?></h2>
+  <?php echo $content['text_block']; ?>
+  <?php echo $content['code_block']; ?>
+
+  <img src="<?php echo $content['image']; ?>" alt="">
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $content['embed']; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+<?php endforeach; ?>
 
 <?php endif; get_footer(); ?>
