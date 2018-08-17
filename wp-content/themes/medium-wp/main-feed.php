@@ -1,6 +1,6 @@
 
 <section class="main-feed">
-  <div class="main-feed__nav">
+<!--   <div class="main-feed__nav">
   	<div class="main-feed__heading">
   		<h3 class="main-feed__header-title">Featured for members</h3>
   		<a href class="main-feed__link">More <i class="fa fa-chevron-right"></i></a>
@@ -15,13 +15,13 @@
 
     <div class="main-feed__details-container">
       <div class="main-feed__author-content">
-       <p><a class="main-feed__author" href="#0">Author</a> in <a class="main-feed__place" href="#0">Place</a></p>
+        <p><a class="main-feed__author" href="#0">Author</a> in <a class="main-feed__place" href="#0">Place</a></p>
         <p class="main-feed__sub">Apr 24, 2017 &bull; <i class="fa fa-star"></i> 7 min read <i class="fa fa-angle-down"></i></p>
       </div>
       <div class="main-feed__bookmark-container">
-        <i class="fa fa-bookmark-o"></i>
-    </div>
-    </div>  
+          <i class="fa fa-bookmark-o"></i>
+      </div>
+      </div>  
     </div>
 
     <figure class="main-feed__image">
@@ -105,5 +105,5 @@
     </figure>
   </article>
   </a>
-  
+   -->
 </section>

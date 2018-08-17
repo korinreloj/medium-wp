@@ -58,7 +58,7 @@
       </li>
   </aside>
 
-  <footer>
+  <!-- <footer>
     <div class="feed-sidebar__footer">
       <a class="" href="#0">Help</a>
       <a class="" href="#0">Status</a>
@@ -69,5 +69,5 @@
       <a class="" href="#0">Terms</a>
       <a class="" href="#0">About</a>
     </div>
-</footer>
+</footer> -->
 </section>
