@@ -16,9 +16,14 @@
           </p>
         </a>
         <footer>
-          <p><a href="#">Josh S. Rose</a> in <a href="#">America at Work</a></p>
+          <div class="footer-content">
+            <p><a href="#">Josh S. Rose</a> in <a href="#">America at Work</a></p>
+            <p class="add-details">Apr 24, 2017 &bull; <i class="fa fa-star"></i> 7 min read</p>
+          </div>
+          <div class="bookmark-container">
+            <i class="fa fa-bookmark-o"></i>
+          </div>
         </footer>
-
       </div>
     </article>
 
@@ -36,7 +41,13 @@
             </p>
           </a>
           <footer>
-            <p><a href="#">Josh S. Rose</a></p>
+            <div class="footer-content">
+              <p><a href="#">Josh S. Rose</a></p>
+              <p class="add-details">Apr 24, 2017 &bull; <i class="fa fa-star"></i> 7 min read</p>
+            </div>
+            <div class="bookmark-container">
+              <i class="fa fa-bookmark-o"></i>
+            </div>
           </footer>
       	</div>
 
@@ -48,12 +59,18 @@
       <article class="featured-content__cards__small">
         <div class="featured-content__cards__small__details">
           <a href="#">
-            <h3 class ="small-title">
+            <h3 class ="small-title without-sub">
               What I Learned from Gods Who Don’t Exist
             </h3>
           </a>
           <footer>
-            <p><a href="#">Josh S. Rose</a> in <a href="#">America at Work</a></p>
+            <div class="footer-content">
+              <p><a href="#">Josh S. Rose</a> in <a href="#">America at Work</a></p>
+              <p class="add-details">Apr 24, 2017 &bull; <i class="fa fa-star"></i> 7 min read</p>
+            </div>
+            <div class="bookmark-container">
+              <i class="fa fa-bookmark-o"></i>
+            </div>
           </footer>
         </div>
 
@@ -65,12 +82,18 @@
       <article class="featured-content__cards__small">
         <div class="featured-content__cards__small__details">
           <a href="#">
-            <h3 class ="small-title">
+            <h3 class ="small-title without-sub">
               What I Learned from Gods Who Don’t Exist
             </h3>
           </a>
           <footer>
-            <p><a href="#">Josh S. Rose</a> in <a href="#">America at Work</a></p>
+            <div class="footer-content">
+              <p><a href="#">Josh S. Rose</a> in <a href="#">America at Work</a></p>
+              <p class="add-details">Apr 24, 2017 &bull; <i class="fa fa-star"></i> 7 min read</p>
+            </div>
+            <div class="bookmark-container">
+              <i class="fa fa-bookmark-o"></i>
+            </div>
           </footer>
         </div>
 
@@ -96,7 +119,10 @@
           </p>
         </a>
         <footer>
-          <p><a href="#">Josh S. Rose</a> in <a href="#">America at Work</a></p>
+          <div class="footer-content">
+            <p><a href="#">Josh S. Rose</a> in <a href="#">America at Work</a></p>
+            <p class="add-details">Apr 24, 2017 &bull; <i class="fa fa-star"></i> 7 min read</p>
+          </div>
         </footer>
 
       </div>
