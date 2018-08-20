@@ -1,0 +1,476 @@
+.featured-content{
+	//mobile
+	margin-right: rem(16);
+	margin-left: rem(16);
+	margin-top: rem(12);
+	width: 288 / 320 * 100vw;
+
+	@include tablet{
+		margin-bottom: rem(8);
+		width: 728 / 760 * 100vw;
+	}
+
+	@include desktop{
+		width: 991 / 1020 * 100vw;
+		margin-bottom: rem(0);
+	}
+
+	&__cards{
+		margin-bottom: rem(56);
+		
+		@include tablet{
+			display: flex;
+			margin-bottom: rem(8);
+		}
+
+		@include desktop{
+			width: 991 / 1020 * 100vw;
+		}
+	}
+
+	&__cards__large{
+		//mobile
+		margin-bottom: rem(40);	
+
+		@include tablet{
+			margin-bottom: rem(0);
+		}
+		
+		@include desktop{
+			margin-bottom: rem(0);
+		}
+		
+	}
+
+	&__cards__large__image{
+		//mobile
+		margin: 0;
+		margin-bottom: rem(16);
+		width: 288 / 320 * 100vw;
+		min-height: rem(150);
+		@include aspect-ratio(288, 150);
+
+		@include tablet {
+			width: 316 / 760 * 100vw;
+			min-height: rem(150);
+			@include aspect-ratio(316, 150);
+			margin-right: rem(24);
+		}
+
+		@include desktop {
+			width: 299 / 1020 * 100vw;
+			min-height: rem(150);
+			@include aspect-ratio(299, 150);
+		}
+
+		img {
+			@include img-cover;
+		}
+
+	}
+
+	&__cards__large__details{
+		//mobile
+		display: block;
+		position: relative;
+		width: 288 / 320 * 100vw;
+		margin-bottom: rem(16);
+
+		a, a:visited, a:hover{
+			text-decoration: none;
+		}
+
+		@include tablet{
+			padding-left: rem(12);
+			width: 316 / 760 * 100vw;
+		}
+
+		@include desktop{
+			padding-left: rem(24);
+			width: 299 / 1020 * 100vw;
+		}
+
+		.large-title{
+			//mobile
+			font-size: rem(17);
+			font-family: 'Open Sans', sans-serif;
+			font-weight: bold;				
+			letter-spacing: rem(-0.42);
+			color: $color-black;
+
+			padding-right: rem(104);
+			margin-bottom: rem(10);
+
+			@include tablet{
+				font-size: rem(20);
+				padding-right: 0;
+				width: 304 / 760 * 100vw;
+			}
+
+			@include desktop{
+				width: 275 / 1020 * 100vw;
+			}
+		}
+
+		p{
+			margin-top: 0;
+			margin-bottom: 0;
+			width: 184 / 320 * 100vw;
+
+			font-size: rem(14);
+			font-family: 'Open Sans', sans-serif;
+			color: $color-grey;
+			letter-spacing: rem(-0.42);
+
+			@include tablet{
+				padding-right: 0;
+				width: 304 / 760 * 100vw;
+				font-size: rem(15);
+			}
+
+			@include desktop{
+				width: 275 / 1020 * 100vw;
+			}
+		}
+
+		footer {
+			width: 264 / 320 * 100vw;
+			display: flex;
+
+			.footer-content{
+				padding-right: rem(16);
+			}
+
+			p{
+				margin-top: rem(16);
+				margin-bottom: 0;
+				width: 143 / 320 * 100vw;
+
+				font-size: rem(13);
+				font-family: 'Open Sans', sans-serif;
+				color: $color-black;
+
+				@include tablet{
+					width: 304 / 760 * 100vw;
+					font-size: rem(15);
+				}
+
+				@include desktop{
+					width: 275 / 1020 * 100vw;
+				}
+
+				a, a:visited{
+					text-decoration: none;
+				}
+
+				a:hover{
+					text-decoration: underline;
+				}
+			}
+
+			.add-details{
+				margin-top: rem(4);
+				font-size: rem(13);
+				font-family: 'Open Sans', sans-serif;
+				color: $color-grey;
+				letter-spacing: rem(-0.42);
+
+			}
+
+			.fa-bookmark-o{
+				margin-top: rem(20);
+
+				@include tablet{
+					display: none;
+				}
+
+				@include desktop{
+					display: none;
+				}
+			}
+		}
+	}
+
+	
+
+
+// small card
+	&__smallContainer{
+		article:last-child{
+			margin-bottom: rem(0);
+		}
+	}
+
+	&__cards__small{
+		display: flex;
+		margin-bottom: rem(24);
+
+		@include tablet{
+			width: 364 / 760 * 100vw;
+			flex-direction: row-reverse;
+		}
+
+		@include desktop{
+			width: 389 / 1020 * 100vw;
+			margin-right: rem(24);
+		}
+
+	}
+
+	&__cards__small__details{
+
+		//mobile
+		width: 184 / 320 * 100vw;
+		margin-right: rem(24);
+
+		a, a:visited, a:hover{
+			text-decoration: none;
+		}
+
+		@include tablet{
+			width: 240 / 760 * 100vw;
+			// margin-left: rem(24);
+			margin-right: 0;
+			margin-left: rem(24);
+		}
+
+		@include desktop{
+			width: 265 / 1020 * 100vw;
+		}
+
+
+		.small-title{
+			//font size mus be h2 accdg to Sam
+			font-size: rem(14);
+			font-family: 'Open Sans', sans-serif;
+			font-weight: bold;				
+			letter-spacing: rem(-0.42);
+			color: $color-black;
+
+			margin: 0;
+			width: 184 / 320 * 100vw;
+
+			@include tablet{
+				font-size: rem(16);
+				width: 240/760 * 100vw; //lumalabas 260
+				margin-right: 0;
+			}
+
+			@include desktop{
+				width: 265 / 1020 * 100vw;
+			}
+		}
+
+		.subtitle{
+			margin-top: rem(2);
+			margin-bottom: 0;
+			width: 184 / 320 * 100vw;
+
+			font-size: rem(14);
+			font-family: 'Open Sans', sans-serif;
+			color: $color-grey;
+			letter-spacing: rem(-0.42);
+
+			@include tablet{
+				padding-right: 0;
+				width: 240 /760 * 100vw;
+			}
+
+			@include desktop{
+				width: 265 / 1020 * 100vw;
+			}
+		}
+
+		.without-sub{
+			margin-bottom: 0;
+		}
+
+		footer {
+			width: 264 / 320 * 100vw;
+			display: flex;
+
+			.footer-content{
+				padding-right: rem(16);
+			}
+
+			p{
+				// margin-top: rem(16);
+				margin-bottom: 0;
+				width: 143 / 320 * 100vw;
+
+				font-size: rem(13);
+				font-family: 'Open Sans', sans-serif;
+				color: $color-black;
+
+				@include tablet{
+					padding-left: 0;
+					width: 240/760 * 100vw;
+					margin-top: rem(16);
+				}
+
+				@include desktop{
+					width: 265 / 1020 * 100vw;
+				}
+
+				a, a:visited{
+					text-decoration: none;
+				}
+
+				a:hover{
+					text-decoration: underline;
+				}
+			}
+
+			.add-details{
+				margin-top: rem(4);
+				font-size: rem(13);
+				font-family: 'Open Sans', sans-serif;
+				color: $color-grey;
+				letter-spacing: rem(-0.42);
+
+			}
+
+			.fa-bookmark-o{
+				margin-top: rem(20);
+
+				@include tablet{
+					display: none;
+				}
+
+				@include desktop{
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__cards__small__image{
+		//mobile
+		margin: 0;
+		margin-bottom: rem(16);
+		width: 80 / 320 * 100vw;
+		min-height: rem(80);
+		@include aspect-ratio(80, 80);
+		flex: 1;
+
+		img {
+			@include img-cover;
+		}
+
+		@include tablet{
+			width: 100 / 760 * 100vw;
+			min-height: rem(100);
+			@include aspect-ratio(100, 100);
+			margin-bottom: 0;
+		}
+	}
+
+
+	&__cards__mediumContainer{
+		display: none;
+
+		@include desktop{
+			display: block;
+		}
+	}
+
+	&__cards__medium{
+		@include desktop{
+			width: 264 / 1020 * 100vw;
+		}
+
+
+		&__image{
+
+			@include desktop {
+				margin: 0;
+				margin-bottom: rem(16);
+		 		width: 262 / 1020 * 100vw;
+				min-height: rem(150);
+				@include aspect-ratio(262, 150);
+			}
+
+			img {
+				@include img-cover;
+			}
+
+		}
+
+		&__details{
+			a, a:visited, a:hover{
+				text-decoration: none;
+			}	
+
+			.medium-title{
+				font-size: rem(17);
+				font-family: 'Open Sans', sans-serif;
+				font-weight: bold;				
+				letter-spacing: rem(-0.42);
+				color: $color-black;
+			}
+
+			.subtitle{
+				font-size: rem(15);
+				font-family: 'Open Sans', sans-serif;
+				color: $color-grey;
+				letter-spacing: rem(-0.42);
+
+				margin: 0;
+			}
+
+			footer{
+				font-size: rem(14);
+				font-family: 'Open Sans', sans-serif;
+				color: $color-black;
+
+				a, a:visited{
+					text-decoration: none;
+				}
+
+				a:hover{
+					text-decoration: underline;
+				}
+
+				.add-details{
+					margin-top: rem(4);
+					font-size: rem(13);
+					font-family: 'Open Sans', sans-serif;
+					color: $color-grey;
+					letter-spacing: rem(-0.42);
+				}
+
+				p{
+					margin-bottom: 0;
+				}
+			}
+		}
+
+	}
+
+
+	// featured-link
+	.featured-link{
+		//mobile
+		margin-bottom: rem(16);
+		padding-left: rem(12);
+		font-family: 'Open Sans', sans-serif;
+		font-size: rem(15);
+
+		a, a:visited{
+			text-transform: uppercase;
+			text-decoration: none;
+			color: $color-green;
+		}
+
+		a:hover{
+			color: #027758;
+			/* change the color 
+			when Sam changes the colors for link*/
+		}
+
+		@include desktop{
+			margin-bottom: rem(24);
+			float: right;
+		}
+	}
+}
