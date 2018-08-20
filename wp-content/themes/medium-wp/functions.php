@@ -7,3 +7,5 @@
 
 // include_once('ACF/breaker.php');
 
+include_once('ACF/flexible-content.php');
+include_once('ACF/main_feed.php');

@@ -1,5 +1,39 @@
 
-<section class="main-feed">
+<section class="main-feed"> 
+
+<?php query_posts([ 
+
+    'post_type' => 'post',
+    'posts_per_page' => 3 // number of posts that will be displayed
+
+  ]); ?>
+
+<?php if(have_posts()): while(have_posts()): the_post(); ?>
+  <?php 
+    /*
+      The following variables may be used:
+      $title - to display the title of the post
+      $thumbnail_image - to display thumbnail image of the post
+      $content - to display the subtitle of the post
+      $time - to display the time the post was published
+      $author - to display the name of the author
+    */
+    $title = get_the_title();
+    $thumbnail_image = get_field('thumbnail_image');
+    $subtitle = get_the_content();
+    $time = get_the_time('F j, Y');
+    $author = get_field('name');
+  ?>
+
+  <h3 class="article-title"><?php //echo $title; ?></h3>
+  <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php echo $title ?></a>
+  <p> <?php echo $subtitle; ?> </p>
+  <img src="<?php echo $thumbnail_image['sizes']['thumbnail']; ?>" alt="">
+  <p> <?php echo $author; ?> </p>
+  <p> <?php echo $time; ?> </p>
+
+<?php endwhile; endif; wp_reset_query(); ?>
+
 <!--   <div class="main-feed__nav">
   	<div class="main-feed__heading">
   		<h3 class="main-feed__header-title">Featured for members</h3>
