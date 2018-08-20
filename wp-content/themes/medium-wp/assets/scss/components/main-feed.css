@@ -1,0 +1,32 @@
+.main-feed {
+  padding: rem(20); }
+  .main-feed__nav {
+    margin-top: rem(48);
+    font-size: rem(12);
+    font-family: 'Open Sans', sans-serif; }
+  .main-feed__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .main-feed__link {
+    text-transform: uppercase;
+    color: gray; }
+  .main-feed__container {
+    display: flex; }
+  .main-feed__content {
+    margin-right: rem(24);
+    opacity: 0.8;
+    color: black;
+    font-family: 'Open Sans', sans-serif; }
+  .main-feed__title {
+    font-size: rem(12);
+    margin-bottom: 0; }
+  .main-feed h2 {
+    font-size: rem(16); }
+  .main-feed p {
+    margin: 0 auto;
+    font-size: rem(13);
+    font-family: 'Open Sans', sans-serif;
+    color: gray; }
+
+/*# sourceMappingURL=main-feed.css.map */
