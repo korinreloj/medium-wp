@@ -14,20 +14,23 @@
       The following variables may be used:
       $title - to display the title of the post
       $thumbnail_image - to display thumbnail image of the post
-      $content - to display the subtitle of the post
-      $time - to display the time the post was published
+      $sub_title - to display the subtitle of the post
+      $content - to display the content of the post
       $author - to display the name of the author
+      $time - to display the time the post was published
+      
     */
     $title = get_the_title();
-    $thumbnail_image = get_field('thumbnail_image');
-    $subtitle = get_the_content();
-    $time = get_the_time('F j, Y');
-    $author = get_field('name');
+    $thumbnail_image = get_field('image');
+    $sub_title = get_field('sub_title');
+    $content= get_the_content();
+    $author = get_field('author');
+    $time = get_the_time('M j, Y');
   ?>
-
-  <h3 class="article-title"><?php //echo $title; ?></h3>
+<br>
   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php echo $title ?></a>
-  <p> <?php echo $subtitle; ?> </p>
+  <p> <?php echo $sub_title; ?> </p>
+  <p> <?php echo $content; ?> </p>
   <img src="<?php echo $thumbnail_image['sizes']['thumbnail']; ?>" alt="">
   <p> <?php echo $author; ?> </p>
   <p> <?php echo $time; ?> </p>

@@ -2,12 +2,12 @@
 
 <?php
 $title = get_the_title();
-$hero_image = get_field('hero_image');
+$hero_image = get_field('image');
 $sub_title = get_field('sub_title');
 $heading_text= get_field('heading_text');
 ?>
 
-<img src="<?php echo $hero_image['url']; ?>" alt="">
+<img src="<?php echo $hero_image['sizes']['large']; ?>" alt="">
 
 <h1 class="article-title"><?php echo $title; ?></h1>
 <h2 class="article-subtitle"><?php echo $sub_title; ?></h2>
@@ -38,7 +38,7 @@ $heading_text= get_field('heading_text');
       case 'image': 
       $image = get_sub_field('image');
       ?>
-      <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="">
+      <img src="<?php echo $image['sizes']['large']; ?>" alt="">
       
       <?php
       break;
