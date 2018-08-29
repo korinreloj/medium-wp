@@ -1,21 +1,31 @@
 <div class="category-nav">
-  	<nav class="category-nav__links">
-  	<a href="#">Home</a>
-  	<a href="#">Great</a>
-  	<a href="#">Culture</a>
-  	<a href="#">Tech</a>	
-  	<a href="#">Entrepreneurship</a>
-  	<a href="#">Self</a>
-  	<a href="#">Politics</a>
-  	<a href="#">Design</a>
-  	<a href="#">Science</a>
-  	<a href="#">Popular</a>	
-  	<a href="#">More</a>
+  <div class = "category-nav__button">
+    <a href="#" class="btn btn-left"><</a>
+  </div>
+
+  <nav class="category-nav__links-ctr">
+    <div class ="category-nav__track">
+    	<div class = "item first"><a href="#">Home</a></div>
+    	<div class = "item"><a href="#">Great</a></div>
+      <div class = "item"><a href="#">Culture</a></div>
+      <div class = "item"><a href="#">Tech</a>	</div>
+      <div class = "item"><a href="#">Entrepreneurship</a></div>
+      <div class = "item"><a href="#">Self</a></div>
+      <div class = "item"><a href="#">Politics</a></div>
+      <div class = "item"><a href="#">Design</a></div>
+      <div class = "item"><a href="#">Science</a></div>
+      <div class = "item"><a href="#">Popular</a></div>
+      <div class = "item"><a href="#">More</a></div>
+    </div>
   </nav>
+
+  <div class = "category-nav__button">
+    <a href="#" class="btn btn-right">></a>
+  </div>
 </div>
 
-<!-- 
-<div class="content">
+
+<!-- <div class="content">
   <p>
     <a href="#" class="tooltip" title="This is tooltip # 1">Lorem ipsum dolor</a> sit amet, has graece malorum in, ex has novum everti, aliquam veritus splendide mel cu. Mel ad dolorem perpetua, eu usu omnis liber, viris delenit apeirian ad mel. At pericula expetenda quo, vel cu minim tantas prodesset. <a href="#" class="tooltip" title="This is tooltip # 2">Elitr ocurreret ex pri</a>, id nec porro similique, eu quod temporibus vis. Qui ei probo doctus expetendis, an duo <a href="#" class="tooltip" title="Hello Sam!">commodo sapientem maluisset</a>.
 
