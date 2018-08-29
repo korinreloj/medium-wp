@@ -1,0 +1,115 @@
+.feed-sidebar {
+	display: none;
+
+	@include desktop {
+		position: relative;
+		display: block;	
+		margin-right: rem(10); 
+		margin-left: rem(50);
+		width: percentage(5/15);
+	}
+
+	&__nav {
+		font-size: rem(12);
+
+	}
+
+	&__heading {
+		border-bottom: rem(1) solid rgba(0, 0, 0, .15);
+
+		@include tablet {
+			margin-left: 0;
+		}
+
+		@include desktop {
+			margin-left: 0;
+		}
+	}
+
+	&__title {
+		font-size: rem(15);
+		text-decoration: none;
+	}
+
+	&__header-title {
+			font-family: 'Open Sans', sans-serif;
+		
+		@include desktop {
+			font-weight: bold;
+			font-size: rem(20);
+		}
+	}
+
+	&__container {
+		padding-top: rem(10);
+		padding-left: rem(50);
+		color: $color-grey;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	ol {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		counter-reset: li;
+
+	 li {
+
+	 	&::before {
+	 		position: absolute;
+			counter-increment: li;
+			content: counter(li, decimal-leading-zero);
+			right: calc(90%);
+			font-size: rem(30);
+			color: $color-grey-light;
+	 	}
+	 }
+	}
+
+	&__details-container {
+		@include desktop {
+			margin-bottom: rem(40);
+		}
+	}
+
+	&__details {
+		font-size: rem(12);
+		margin-top: rem(15);
+		margin-bottom: rem(20);
+	}	
+
+	h2 {
+		margin-top: rem(88);
+		font-size: rem(20);
+	}
+
+	h3 {
+		font-size: rem(16);
+		margin-bottom: rem(5);
+	}
+
+	a {
+		text-decoration: none;
+		color: $color-black;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	&__footer {
+		padding-top: rem(20);
+		justify-content: space-between;
+
+		a {
+			margin-right: rem(15);
+			font-size: rem(14);
+			color: $color-grey;
+		}
+	}
+
+	footer {
+		margin-top: rem(60);
+		border-top: rem(1) solid rgba(0, 0, 0, .10);
+	}
+}

@@ -1,41 +1,64 @@
-
-
 <?php get_header(); if(have_posts()): the_post(); ?>
 
 <?php
-  $title = get_the_title();
-  $hero_image = get_field('hero_image');
-  $sub_title = get_field('sub_title');
-  $text_block = get_field('text_block');
-  $inline_image_large = get_field('inline_image_large');
-  $inline_image_full = get_field('inline_image_full');
-  $embed = get_field('oembed');
-  $first_name = get_the_author_meta('first_name');
-  $last_name = get_the_author_meta('last_name');
-  $description = get_the_author_meta('description');
-  $profile_picture = get_avatar('ID');
+$title = get_the_title();
+$hero_image = get_field('image');
+$sub_title = get_field('sub_title');
+$heading_text= get_field('heading_text');
 ?>
 
-  <img src="<?php echo $hero_image['url']; ?>" alt="">
+<img src="<?php echo $hero_image['sizes']['large']; ?>" alt="">
 
-  <h1 class="article-title"><?php echo $title; ?></h1>
-  <h2 class="article-subtitle"><?php echo $sub_title; ?></h2>
-  <p class="article-textblock"><?php echo $text_block; ?></p>
+<h1 class="article-title"><?php echo $title; ?></h1>
+<h2 class="article-subtitle"><?php echo $sub_title; ?></h2>
 
-  <img src="<?php echo $inline_image_large['url']; ?>" alt="">
+<?php echo $heading_text; ?>
 
-  <div class="article-embed"> <?php echo $embed; ?> </div>
-  <div class="article-content">
-    <?php /*the_content(); */?>
-  </div>
+<?php if( have_rows('flexible_content_field') ): ?>
 
-  <footer>
-    <?php echo "$profile_picture"; ?>
-    <br>
-    <?php echo "$first_name $last_name"; ?>
-    <br>
-    <?php echo "$description"; ?>
+<ul class="slides">
 
-  </footer>
+<?php while( have_rows('flexible_content_field') ): the_row(); ?>
+<?php
+    $layout = get_row_layout();
+    switch ($layout){
+
+      case 'header_text':
+      the_sub_field('header_text');
+      break;
+   
+      case 'text_block':
+      the_sub_field('text_block');
+      break;
+   
+      case 'code_block':
+      the_sub_field('code_block');
+      break;
+          
+      case 'image': 
+      $image = get_sub_field('image');
+      ?>
+      <img src="<?php echo $image['sizes']['large']; ?>" alt="">
+      
+      <?php
+      break;
+      
+      case 'embed':
+      ?>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php the_sub_field('embed'); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      
+      <?php
+      break;
+
+      default:
+      echo “”;
+    }
+  ?>
+
+<?php endwhile; ?>
+
+</ul>
+
+<?php endif; ?>
 
 <?php endif; get_footer(); ?>

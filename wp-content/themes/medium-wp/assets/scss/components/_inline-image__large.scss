@@ -1,0 +1,54 @@
+.inline-image__large {
+	display: flex;
+	flex-direction: column-reverse;
+
+	@include desktop {
+		margin-right: rem(50);
+		margin-left: rem(50);
+		flex-direction: row;
+	}
+
+	&__content {
+		padding-top: rem(30);
+		padding-right: rem(16);
+		padding-left: rem(16);
+	}
+
+	&__image-container {
+		width: 100%;
+		height: rem(300);
+		@include aspect-ratio(320, 300);
+		overflow: hidden;
+
+		@include desktop {
+			width: 556 / 1020 * 100vw;
+			height: rem(500);
+			@include aspect-ratio(556, 500);
+		}
+	}
+
+	&__image-caption {
+		p {
+			font-size: rem(14);
+			text-align: center;
+		}
+	}
+
+	&__caption {
+		text-transform: uppercase;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}	
+
+	p {
+		margin-top: rem(10);
+	}
+
+	h1 {
+		margin-bottom: 0;
+	}
+}

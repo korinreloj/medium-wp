@@ -1,64 +1,65 @@
-
 <section class="main-feed">
-  <div class="main-feed__nav">
-  	<div class="main-feed__heading">
-  		<h2>Featured for members</h2>
-  		<a href class="main-feed__link">More ></a>
-  	</div>
-  </div>
 
-  <a href="#0">
-  <article class="main-feed__container">
-  	<div class="main-feed__content">
-  	<h2 class="main-feed__title">History is Repeating Itself for Asian Americans Under Trump</h2>
-  	<p>The 'model minority' myth obsecures decades of discrimination</p>
-  </div>
-  <figure class="main-feed__image">
-  	<img src="https://cdn-images-1.medium.com/fit/c/152/156/1*4acVyKLTn_L0mMl9qUmyWQ.jpeg">
-  </figure>
-  </article>
-  </a>
+<?php query_posts([ 
 
-  <a href="#0">
-  <article class="main-feed__container">
-  	<div class="main-feed__content">
-  	<h2 class="main-feed__title">What's Happening to Our Kids?</h2>
-  	<p>Technology's latest disruption: the middle school relationship</p>
-  </div>
-  <figure class="image">
-  	<img src="https://cdn-images-1.medium.com/focal/152/156/50/53/1*WZHonKCxRSWRzMNvmJ79hg.jpeg">
-  </figure>
-  </article>
-  </a>
+    'post_type' => 'post',
+    'posts_per_page' => 3 // number of posts that will be displayed
+
+  ]); ?>
 
   <div class="main-feed__nav">
-  	<div class="main-feed__heading">
-  		<h2>Technology</h2>
-  		<a href class="main-feed__link">More ></a>
-  	</div>
+    <div class="main-feed__heading">
+      <h3 class="main-feed__header-title">Recent Posts</h3>
+    </div>
   </div>
+   
 
-  <a href="#0">
+<?php if(have_posts()): while(have_posts()): the_post(); ?>
+  <?php 
+    /*
+      The following variables may be used:
+      $title - to display the title of the post
+      $thumbnail_image - to display thumbnail image of the post
+      $sub_title - to display the subtitle of the post
+      $content - to display the content of the post
+      $author - to display the name of the author
+      $time - to display the time the post was published
+      
+    */
+    $title = get_the_title();
+    $thumbnail_image = get_field('image');
+    $sub_title = get_field('sub_title');
+    $content= get_the_content();
+    $author = get_field('author');
+    $time = get_the_time('M j, Y');
+  ?>
+    
   <article class="main-feed__container">
-  	<div class="main-feed__content">
-  	<h2 class="main-feed__title">Will The Bitcoin Bubble Pop? Or Will It Envelop Us All?</h2>
-  	<p>On the society-enhancing power of hyperobjects</p>
-  </div>
-  <figure class="image">
-  	<img src="https://cdn-images-1.medium.com/fit/c/152/156/1*AiUseEInfSgoI9ViwEvn_Q.jpeg">
-  </figure>
+    <div class="main-feed__content">
+      <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3 class="main-feed__title"><?php echo $title ?></h3></a>
+      
+      <p class="main-feed__description"><?php echo $sub_title; ?></p>
+
+      <div class="main-feed__details-container">
+        <div class="main-feed__author-content">
+          <p class="main-feed__author"><?php echo $author; ?> in <a class="main-feed__place" href="#">Place</a></p>
+          <p class="main-feed__sub">
+            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+              <?php echo $time; ?>
+            </a>
+          </p>
+        </div>
+      </div>  
+    </div>
+
+    <figure class="main-feed__image">
+       <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+        <img src="<?php echo $thumbnail_image['sizes']['thumbnail']; ?>">
+      </a>
+    </figure>
   </article>
-  </a>
+  
 
-  <a href="#0">
-  <article class="main-feed__container">
-  	<div class="main-feed__content">
+<?php endwhile; endif; wp_reset_query(); ?>
 
-  	<h2 class="main-feed__title">How Fake Influence Campaigns on Facebook Lured Real People</h2>
-  	<p>Activists became entangled with fake accounts and pages on Facebook, leading to significant consequences for them as the company tried to..</p>
-  </div>
-
-  	<img src="https://cdn-images-1.medium.com/focal/152/156/52/47/1*7L0V3I60ROF_lvvqzoWDVw.jpeg">
-  </article>
-  </a>
 </section>
