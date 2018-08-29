@@ -1,5 +1,4 @@
-
-<section class="main-feed"> 
+<section class="main-feed">
 
 <?php query_posts([ 
 
@@ -7,6 +6,13 @@
     'posts_per_page' => 3 // number of posts that will be displayed
 
   ]); ?>
+
+  <div class="main-feed__nav">
+    <div class="main-feed__heading">
+      <h3 class="main-feed__header-title">Recent Posts</h3>
+    </div>
+  </div>
+   
 
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
   <?php 
@@ -27,120 +33,33 @@
     $author = get_field('author');
     $time = get_the_time('M j, Y');
   ?>
-<br>
-  <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php echo $title ?></a>
-  <p> <?php echo $sub_title; ?> </p>
-  <p> <?php echo $content; ?> </p>
-  <img src="<?php echo $thumbnail_image['sizes']['thumbnail']; ?>" alt="">
-  <p> <?php echo $author; ?> </p>
-  <p> <?php echo $time; ?> </p>
-
-<?php endwhile; endif; wp_reset_query(); ?>
-
-<!--   <div class="main-feed__nav">
-  	<div class="main-feed__heading">
-  		<h3 class="main-feed__header-title">Featured for members</h3>
-  		<a href class="main-feed__link">More <i class="fa fa-chevron-right"></i></a>
-  	</div>
-  </div>
-
-  <a href="#0">
+    
   <article class="main-feed__container">
-  	<div class="main-feed__content">
-    	<h3 class="main-feed__title">History is Repeating Itself for Asian Americans Under Trump</h3>
-    	<p>The 'model minority' myth obsecures decades of discrimination. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit doloremque accusamus id dolorem provident. Iure aliquam sapiente fugiat veritatis quia eaque accusantium magnam eius, praesentium, eum sit cum minus aperiam!</p>
+    <div class="main-feed__content">
+      <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3 class="main-feed__title"><?php echo $title ?></h3></a>
+      
+      <p class="main-feed__description"><?php echo $sub_title; ?></p>
 
-    <div class="main-feed__details-container">
-      <div class="main-feed__author-content">
-        <p><a class="main-feed__author" href="#0">Author</a> in <a class="main-feed__place" href="#0">Place</a></p>
-        <p class="main-feed__sub">Apr 24, 2017 &bull; <i class="fa fa-star"></i> 7 min read <i class="fa fa-angle-down"></i></p>
-      </div>
-      <div class="main-feed__bookmark-container">
-          <i class="fa fa-bookmark-o"></i>
-      </div>
+      <div class="main-feed__details-container">
+        <div class="main-feed__author-content">
+          <p class="main-feed__author"><?php echo $author; ?> in <a class="main-feed__place" href="#">Place</a></p>
+          <p class="main-feed__sub">
+            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+              <?php echo $time; ?>
+            </a>
+          </p>
+        </div>
       </div>  
     </div>
 
     <figure class="main-feed__image">
-  	<img src="https://cdn-images-1.medium.com/fit/c/152/156/1*4acVyKLTn_L0mMl9qUmyWQ.jpeg">
+       <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+        <img src="<?php echo $thumbnail_image['sizes']['thumbnail']; ?>">
+      </a>
     </figure>
   </article>
-  </a>
+  
 
-  <a href="#0">
-  <article class="main-feed__container">
-    <div class="main-feed__content">
-      <h3 class="main-feed__title">History is Repeating Itself for Asian Americans Under Trump</h3>
-      <p>The 'model minority' myth obsecures decades of discrimination. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam eligendi unde ducimus, ex quam hic nobis. Soluta, incidunt, optio rem molestias expedita tempore ipsum aliquid harum aliquam numquam eius beatae.</p>
+<?php endwhile; endif; wp_reset_query(); ?>
 
-    <div class="main-feed__details-container">
-      <div class="main-feed__author-content">
-       <p><a class="main-feed__author" href="#0">Author</a> in <a class="main-feed__place" href="#0">Place</a></p>
-        <p class="main-feed__sub">Apr 24, 2017 &bull; <i class="fa fa-star"></i> 7 min read <i class="fa fa-angle-down"></i></p>
-      </div>
-      <div class="main-feed__bookmark-container">
-        <i class="fa fa-bookmark-o"></i>
-    </div>
-    </div>  
-    </div>
-
-    <figure class="main-feed__image">
-    <img src="https://cdn-images-1.medium.com/fit/c/152/156/1*4acVyKLTn_L0mMl9qUmyWQ.jpeg">
-    </figure>
-  </article>
-  </a>
-
-
-  <div class="main-feed__nav">
-  	<div class="main-feed__heading">
-  		<h3 class="main-feed__header-title">Technology</h3>
-  		<a href class="main-feed__link">More <i class="fa fa-chevron-right"></i></a>
-  	</div>
-  </div>
-
-  <a href="#0">
-  <article class="main-feed__container">
-    <div class="main-feed__content">
-      <h3 class="main-feed__title">History is Repeating Itself for Asian Americans Under Trump</h3>
-      <p>The 'model minority' myth obsecures decades of discrimination. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sunt cum necessitatibus labore recusandae ad, neque! Facilis quasi quos, veritatis deserunt culpa sed, magnam, cum dolor reprehenderit distinctio adipisci magni.</p>
-
-    <div class="main-feed__details-container">
-      <div class="main-feed__author-content">
-       <p><a class="main-feed__author" href="#0">Author</a> in <a class="main-feed__place" href="#0">Place</a></p>
-        <p class="main-feed__sub">Apr 24, 2017 &bull; <i class="fa fa-star"></i> 7 min read <i class="fa fa-angle-down"></i></p>
-      </div>
-      <div class="main-feed__bookmark-container">
-        <i class="fa fa-bookmark-o"></i>
-    </div>
-    </div>  
-    </div>
-
-    <figure class="main-feed__image">
-    <img src="https://cdn-images-1.medium.com/fit/c/152/156/1*4acVyKLTn_L0mMl9qUmyWQ.jpeg">
-    </figure>
-  </article>
-  </a>
-    <a href="#0">
-  <article class="main-feed__container">
-    <div class="main-feed__content">
-      <h3 class="main-feed__title">History is Repeating Itself for Asian Americans Under Trump</h3>
-      <p>The 'model minority' myth obsecures decades of discrimination. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sunt cum necessitatibus labore recusandae ad, neque! Facilis quasi quos, veritatis deserunt culpa sed, magnam, cum dolor reprehenderit distinctio adipisci magni.</p>
-
-    <div class="main-feed__details-container">
-      <div class="main-feed__author-content">
-       <p><a class="main-feed__author" href="#0">Author</a> in <a class="main-feed__place" href="#0">Place</a></p>
-        <p class="main-feed__sub">Apr 24, 2017 &bull; <i class="fa fa-star"></i> 7 min read <i class="fa fa-angle-down"></i></p>
-      </div>
-      <div class="main-feed__bookmark-container">
-        <i class="fa fa-bookmark-o"></i>
-    </div>
-    </div>  
-    </div>
-
-    <figure class="main-feed__image">
-    <img src="https://cdn-images-1.medium.com/fit/c/152/156/1*4acVyKLTn_L0mMl9qUmyWQ.jpeg">
-    </figure>
-  </article>
-  </a>
-   -->
 </section>
