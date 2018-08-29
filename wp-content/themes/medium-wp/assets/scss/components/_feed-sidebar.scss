@@ -2,12 +2,12 @@
 	display: none;
 
 	@include tablet {
-		position: relative;
-		display: block;
-		margin-top: rem(20);
-		margin-right: rem(60); 
-		margin-left: rem(50);
-		width: percentage(5/15);
+		// position: relative;
+		display: none;
+		// margin-top: rem(20);
+		// margin-right: rem(60); 
+		// margin-left: rem(50);
+		// width: percentage(5/15);
 	}
 
 	@include desktop {
