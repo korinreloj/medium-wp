@@ -1,0 +1,46 @@
+
+.category-nav{
+	//desktop breakpoint
+	width: 100vw;
+	height: rem(50);
+
+  background-color: #fff;
+	//adjust margin when resized
+	margin-left: auto;
+	margin-right: auto;
+
+	position: relative;
+	text-align: center;
+
+	&__links{
+		font-family: 'Open Sans', sans-serif;
+		font-size: rem(13);
+		padding-top: rem(15);
+
+		@include desktop {
+			font-size: rem(14);
+		}
+
+		a, a:visited{
+			text-transform: uppercase;
+			text-decoration: none;
+			color: rgba(0,0,0,.54);
+			padding-left: rem(24);
+		}
+
+		a:first-child{
+			padding-left: 0;
+		}
+
+		a:hover{
+			color: rgba(0,0,0,.84);
+		}
+	}
+	
+}
+
+
+
+
+
+

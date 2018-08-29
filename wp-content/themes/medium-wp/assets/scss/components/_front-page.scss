@@ -1,0 +1,8 @@
+.content {
+	display: flex;
+
+	@include desktop {
+		margin-right: 120 / 1020 * 100vw;
+		margin-left: 120 / 1020 * 100vw;
+	}
+}
