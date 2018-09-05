@@ -1,0 +1,79 @@
+.article_page{
+	.author_info{
+		margin-top: rem(60);
+		margin-bottom: rem(10);
+		margin-left: rem(20);
+		margin-right: rem(20);
+		display: flex;
+
+		@include tablet{
+			margin-top: rem(80);
+			margin-left: rem(30);
+			margin-right: rem(30);
+		}
+
+		@include desktop{
+			margin-top: rem(55);
+			margin-left: rem(160);
+			margin-right: rem(160);
+		}
+
+    .author_icon{
+    	width: rem(60);
+			height: rem(60);
+			@include aspect-ratio(60, 60);
+			
+			img {
+				@include img-cover;
+				border-radius: 50%;
+			}
+
+    }
+
+    .author_details{
+   		padding-left: rem(15);
+   		width: 209 / 320 * 100vw;
+
+    	font-size: rem(14);
+    	font-family: $open-sans;
+			
+			button{
+	 			display: none;
+   		}
+
+    	@include desktop{
+    		button{
+    			display: inline;
+	    		border-color: $color-grey;
+	    		margin-left: rem(6);
+	    		padding-right: rem(10);
+	    		padding-left: rem(10);
+			    cursor: pointer;
+			    font-size: rem(14);
+			    border-radius: rem(5);
+			    color: $color-grey;
+	    	}
+    	}
+
+   		.description, .date{
+   			color: $color-grey;
+   		}
+   	}
+	}
+
+	.article_details{
+		padding-right: rem(20);
+		padding-left: rem(20);
+
+		@include tablet{
+			margin-left: rem(10);
+			margin-right: rem(10);
+		}
+
+		@include desktop{
+			margin-top: rem(39);
+			margin-left: rem(140);
+			margin-right: rem(140);
+		}
+	}
+}
