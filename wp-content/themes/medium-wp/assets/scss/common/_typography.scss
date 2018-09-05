@@ -24,24 +24,31 @@ h1 {
   font-size: rem(40);
   font-weight: rem(400);
 
-  @include tablet{
+  @include tablet {
+    margin-top: rem(39);
+    padding-top: rem(5);
     font-size: rem(42);
   }
 
-  @include desktop{
+  @include desktop {
+    margin-top: rem(39);
+    padding-top: rem(5);
     font-size: rem(60);
   }
 }
 
 h2 {
+  margin-top: rem(5);
+  margin-bottom: rem(22);
   font-size: rem(30);
-  font-weight: rem(400);
+  // font-weight: rem(400);
+  color: $color-grey;
 
-  @include tablet{
+  @include tablet {
     font-size: rem(32);
   }
 
-  @include desktop{
+  @include desktop {
     font-size: rem(50);
   }
 }
@@ -50,11 +57,11 @@ h3 {
   font-size: rem(25);
   font-weight: rem(400);
 
-  @include tablet{
+  @include tablet {
     font-size: rem(27);
   }
 
-  @include desktop{
+  @include desktop {
     font-size: rem(36);
   }
 }
@@ -93,189 +100,101 @@ h6 {
   }
 }
 
-p{
+p {
   font-size: rem(16);
+  font-family: $open-sans;
 }
 
-.header-link {
-  color: $color-green;
-  font-size: rem(8);
-  font-weight: 700;
-  letter-spacing: rem(2);
-  line-height: 1.3;
-  text-transform: uppercase;
+a {
+  font-size: rem(16);
+  font-family: $open-sans;
 }
 
 .category-nav-link{
   font-family: font('open-sans', 'default');
   font-size: rem(15);
 
-  @include desktop{
+  @include desktop {
     font-size: rem(16);
   }
 }
 
+.title {
+  font-size: rem(29);
+  font-family: $open-sans;
+  line-height: rem(35);
+  letter-spacing: rem(-0.42);
+  margin-bottom: 0;
+  margin-top: rem(31);
 
-// .heading-1, .h1,
-// .heading-2, .h2,
-// .heading-3, .h3,
-// .heading-4, .h4,
-// .heading-5, .h5,
-// .heading-6, .h6,
-// .body-text, .body,
-// .numeral, .numeral
-// .link-text, .link {
-//   color: $color-black--mineshaft;
-//   font-family: font('ibm-plex-sans', 'default');
-// }
+  @include desktop{
+    font-size: rem(37);
+    line-height: rem(37);
+  }
+}
 
-// .heading-1, .h1 {
-//   font-size: rem(48);
-//   font-weight: 700;
-//   line-height: 0.9;
+.subtitle {
+  font-size: rem(19);
+  font-family: $open-sans;
+  font-weight: normal;
 
-//   @include breakpoint('tablet') {
-//     font-size: rem(50);
-//   }
+  @include desktop{
+    margin-top: rem(9);
+    font-size: rem(23);
+  }
+}
 
-//   @include breakpoint('desktop') {
-//     font-size: rem(72);
-//   }
-// }
+.header-title {
+  font-size: rem(16);
+}
 
-// .heading-2, .h2 {
-//   font-size: rem(40);
-//   font-weight: 700;
-//   line-height: 0.9;
+.text_block{
+  font-size: rem(17);
+  font-family: $lora-serif;
+  font-weight: normal;
+  letter-spacing: rem(0.1);
+  line-height: rem(30);
 
-//   @include breakpoint('desktop') {
-//     font-size: rem(65);
-//   }
-// }
+  padding-right: rem(20);
+  padding-left: rem(20);
 
-// .heading-3, .h3 {
-//   font-size: rem(24);
-//   font-weight: 700;
-//   line-height: 1;
-//   letter-spacing: rem(1);
+  @include tablet{
+    margin-left: rem(10);
+    margin-right: rem(10);
+  }
 
-//   @include breakpoint('tablet') {
-//     font-size: rem(26);
-//   }
+  @include desktop{
+    font-size: rem(20);
+    margin-top: rem(39);
+    margin-left: rem(140);
+    margin-right: rem(140);
+  }
+}
 
-//   @include breakpoint('desktop') {
-//     font-size: rem(36);
-//   }
-// }
+.header_content{
+  .header_text{
+    font-size: rem(25);
+    font-family: $open-sans;
 
-// .heading-4, .h4 {
-//   font-size: rem(20);
-//   font-weight: 700;
-//   line-height: 1;
+    padding-right: rem(20);
+    padding-left: rem(20);
+    margin-top: rem(28);
+    margin-bottom: rem(8);
 
-//   @include breakpoint('desktop') {
-//     font-size: rem(30);
-//   }
-// }
+    @include tablet{
+      margin-left: rem(10);
+      margin-right: rem(10);
+    }
 
-// .heading-5, .h5 {
-//   font-size: rem(17);
-//   font-weight: 400;
-//   line-height: 1.3;
+    @include desktop{
+      font-size: rem(29);
+      padding-top: 0;
+      margin-top: rem(56);
+      margin-bottom: rem(-27);
+      margin-left: rem(140);
+      margin-right: rem(140);
+    }  
+  }
+  
+}
 
-//   @include breakpoint('tablet') {
-//     font-size: rem(18);
-//   }
-
-//   @include breakpoint('desktop') {
-//     font-size: rem(21);
-//   }
-
-//   &--i {
-//     @extend .heading-5;
-//     font-style: italic;
-//   }
-
-//   &--blue {
-//     @extend .heading-5;
-//     color: $color-blue--eastern;
-//   }
-// }
-
-// .heading-6, .h6 {
-//   font-size: rem(34);
-//   font-weight: 700;
-//   line-height: 0.9;
-
-//   @include breakpoint('desktop') {
-//     font-size: rem(50);
-//   }
-// }
-
-// .body-text, .body {
-//   font-size: rem(15);
-//   font-weight: 300;
-//   line-height: 1.4;
-
-//   @include breakpoint('desktop') {
-//     font-size: rem(18);
-//   }
-
-//   &--sm {
-//     @extend .body-text;
-//     font-size: rem(13);
-//     font-weight: 300;
-//     line-height: 1.3;
-
-//     @include breakpoint('desktop') {
-//       font-size: rem(15);
-//     }
-//   }
-
-//   &--smi {
-//     @extend .body-text--sm;
-//     font-style: italic;
-//   }
-// }
-
-// .numeral {
-//   font-size: rem(50);
-//   font-weight: 700;
-//   line-height: 0.9;
-
-//   @include breakpoint('tablet') {
-//     font-size: rem(30);
-//   }
-
-//   @include breakpoint('desktop') {
-//     font-size: rem(50);
-//   }
-
-//   &--serif {
-//     color: $color-black--mineshaft;
-//     font-family: font('ibm-plex-serif', 'default');
-//     font-size: rem(60);
-//     font-style: italic;
-//     font-weight: 400;
-//     line-height: 1;
-
-//     @include breakpoint('tablet') {
-//       font-size: rem(65);
-//     }
-
-//     @include breakpoint('desktop') {
-//       font-size: rem(96);
-//     }
-//   }
-// }
-
-
-
-//   @include breakpoint('tablet') {
-//     font-size: rem(10);
-//   }
-
-//   @include breakpoint('desktop') {
-//     font-size: rem(12);
-//   }
-// }
