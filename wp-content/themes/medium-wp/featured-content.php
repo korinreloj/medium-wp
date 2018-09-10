@@ -4,24 +4,25 @@
     <!-- large card -->
     <article class="featured-content__cards__large">
     	<figure class="featured-content__cards__large__image">
-    		<img src="https://cdn-images-1.medium.com/focal/832/302/45/56/1*bnLe5b0ELyYs_rTY5kvMng.jpeg">
+        <a href="#">
+    		  <img src="https://cdn-images-1.medium.com/focal/832/302/45/56/1*bnLe5b0ELyYs_rTY5kvMng.jpeg">
+        </a>
     	</figure>
     	<div class="featured-content__cards__large__details">
         <a href="#">
       		<h2 class="large-title">
       			Words of Wisdom From the American Jazz and Negro League Baseball Museum Host
-      		</h2>
-          <p>
-            Ronnie Matloch loves talking history almost as much as he loves people
-          </p>
+      		</h2> 
         </a>
+        <p>
+          Ronnie Matloch loves talking history almost as much as he loves people
+        </p>
         <footer>
           <div class="footer-content">
             <p><a href="#">Josh S. Rose</a> in <a href="#">America at Work</a></p>
-            <p class="add-details">Apr 24, 2017 &bull; <i class="fa fa-star"></i> 7 min read</p>
-          </div>
-          <div class="bookmark-container">
-            <i class="fa fa-bookmark-o"></i>
+            <p class="add-details">
+              <a href="#">Apr 24, 2017</a>
+            </p>
           </div>
         </footer>
       </div>
@@ -36,23 +37,24 @@
             <h3 class ="small-title">
               What I Learned from Gods Who Don’t Exist
             </h3>
-            <p class="subtitle">
-              Ronnie Matloch loves talking history almost as much as he loves people
-            </p>
           </a>
+          <p class="subtitle">
+            Ronnie Matloch loves talking history almost as much as he loves people
+          </p>
           <footer>
             <div class="footer-content">
               <p><a href="#">Josh S. Rose</a></p>
-              <p class="add-details">Apr 24, 2017 &bull; <i class="fa fa-star"></i> 7 min read</p>
-            </div>
-            <div class="bookmark-container">
-              <i class="fa fa-bookmark-o"></i>
+              <p class="add-details">
+                <a href="#">Apr 24, 2017</a>
+              </p>
             </div>
           </footer>
       	</div>
 
         <figure class="featured-content__cards__small__image">
-          <img src="https://cdn-images-1.medium.com/focal/100/100/50/41/1*d7NgHQo_Zp46_Ss0_8qgyw.gif">
+          <a href="#">
+            <img src="https://cdn-images-1.medium.com/focal/100/100/50/41/1*d7NgHQo_Zp46_Ss0_8qgyw.gif">
+          </a>
         </figure>
       </article>
 
@@ -66,16 +68,17 @@
           <footer>
             <div class="footer-content">
               <p><a href="#">Josh S. Rose</a> in <a href="#">America at Work</a></p>
-              <p class="add-details">Apr 24, 2017 &bull; <i class="fa fa-star"></i> 7 min read</p>
-            </div>
-            <div class="bookmark-container">
-              <i class="fa fa-bookmark-o"></i>
+              <p class="add-details">
+                <a href="#">Apr 24, 2017</a>
+              </p>
             </div>
           </footer>
         </div>
 
         <figure class="featured-content__cards__small__image">
-          <img src="https://cdn-images-1.medium.com/focal/100/100/51/63/0*XF3aw52-Rq_42nR2">
+          <a href="#">
+            <img src="https://cdn-images-1.medium.com/focal/100/100/51/63/0*XF3aw52-Rq_42nR2">
+          </a>
         </figure>
       </article>
 
@@ -89,16 +92,17 @@
           <footer>
             <div class="footer-content">
               <p><a href="#">Josh S. Rose</a> in <a href="#">America at Work</a></p>
-              <p class="add-details">Apr 24, 2017 &bull; <i class="fa fa-star"></i> 7 min read</p>
-            </div>
-            <div class="bookmark-container">
-              <i class="fa fa-bookmark-o"></i>
+              <p class="add-details">
+                <a href="#">Apr 24, 2017</a>
+              </p>
             </div>
           </footer>
         </div>
 
         <figure class="featured-content__cards__small__image">
-          <img src="https://cdn-images-1.medium.com/focal/100/100/51/63/0*XF3aw52-Rq_42nR2">
+          <a href="#">
+            <img src="https://cdn-images-1.medium.com/focal/100/100/51/63/0*XF3aw52-Rq_42nR2">
+          </a>
         </figure>
       </article>
     </div>
@@ -107,7 +111,9 @@
     <div class="featured-content__cards__mediumContainer">
     	<article class="featured-content__cards__medium">
       <figure class="featured-content__cards__medium__image">
-        <img src="https://cdn-images-1.medium.com/focal/832/302/45/56/1*bnLe5b0ELyYs_rTY5kvMng.jpeg">
+        <a href="#">
+          <img src="https://cdn-images-1.medium.com/focal/832/302/45/56/1*bnLe5b0ELyYs_rTY5kvMng.jpeg">
+        </a>
       </figure>
       <div class="featured-content__cards__medium__details">
         <a href="#">
@@ -121,7 +127,9 @@
         <footer>
           <div class="footer-content">
             <p><a href="#">Josh S. Rose</a> in <a href="#">America at Work</a></p>
-            <p class="add-details">Apr 24, 2017 &bull; <i class="fa fa-star"></i> 7 min read</p>
+              <p class="add-details">
+                <a href="#">Apr 24, 2017</a>
+              </p>
           </div>
         </footer>
 

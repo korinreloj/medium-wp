@@ -134,11 +134,16 @@
 		}
 
 		footer {
-			width: 264 / 320 * 100vw;
+			width: 184 / 320 * 100vw;
 			display: flex;
 
 			.footer-content{
 				padding-right: rem(16);
+				a{
+					font-size: rem(16);
+					font-family: 'Open Sans', sans-serif;
+					color: $color-black;
+				}
 			}
 
 			p{
@@ -161,10 +166,14 @@
 
 				a, a:visited{
 					text-decoration: none;
+					color: $color-black;
+
 				}
 
 				a:hover{
 					text-decoration: underline;
+					color: $color-black;
+
 				}
 			}
 
@@ -175,17 +184,9 @@
 				color: $color-grey;
 				letter-spacing: rem(-0.42);
 
-			}
-
-			.fa-bookmark-o{
-				margin-top: rem(20);
-
-				@include tablet{
-					display: none;
-				}
-
-				@include desktop{
-					display: none;
+				a, a:hover, a:visited{
+					text-decoration: none;
+					color: $color-grey;
 				}
 			}
 		}
@@ -291,6 +292,11 @@
 
 			.footer-content{
 				padding-right: rem(16);
+				a{
+					font-size: rem(13);
+					font-family: 'Open Sans', sans-serif;
+					color: $color-black;
+				}
 			}
 
 			p{
@@ -314,10 +320,12 @@
 
 				a, a:visited{
 					text-decoration: none;
+					color: $color-black;
 				}
 
 				a:hover{
 					text-decoration: underline;
+					color: $color-black;
 				}
 			}
 
@@ -328,17 +336,9 @@
 				color: $color-grey;
 				letter-spacing: rem(-0.42);
 
-			}
-
-			.fa-bookmark-o{
-				margin-top: rem(20);
-
-				@include tablet{
-					display: none;
-				}
-
-				@include desktop{
-					display: none;
+				a, a:hover, a:visited{
+					text-decoration: none;
+					color: $color-grey;
 				}
 			}
 		}
@@ -350,6 +350,8 @@
 		margin-bottom: rem(16);
 		width: 80 / 320 * 100vw;
 		min-height: rem(80);
+		max-height: rem(80);
+
 		@include aspect-ratio(80, 80);
 		flex: 1;
 
@@ -419,16 +421,24 @@
 			}
 
 			footer{
-				font-size: rem(14);
-				font-family: 'Open Sans', sans-serif;
-				color: $color-black;
+
+				.footer-content{
+					font-size: rem(15);
+					a{
+						font-size: rem(15);
+						font-family: 'Open Sans', sans-serif;
+						color: $color-black;
+					}
+				}
 
 				a, a:visited{
 					text-decoration: none;
+					color: $color-black;
 				}
 
 				a:hover{
 					text-decoration: underline;
+					color: $color-black;
 				}
 
 				.add-details{
@@ -437,6 +447,11 @@
 					font-family: 'Open Sans', sans-serif;
 					color: $color-grey;
 					letter-spacing: rem(-0.42);
+
+					a, a:hover, a:visited{
+						text-decoration: none;
+						color: $color-grey;
+					}
 				}
 
 				p{
