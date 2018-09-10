@@ -65,11 +65,13 @@
         <?php break;?>
           
      
-        <?php case 'code_block':
-        the_sub_field('code_block');
-        break;
+        <?php case 'code_block':?>
+          <div class="code_block">
+            <?php the_sub_field('code_block');?>
+          </div>
+        <?php break;?>
             
-        case 'image': 
+        <?php case 'image': 
         $image = get_sub_field('image');
         ?>
         <img src="<?php echo $image['sizes']['large']; ?>" alt="">

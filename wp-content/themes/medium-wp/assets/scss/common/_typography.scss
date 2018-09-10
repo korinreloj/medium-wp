@@ -1,5 +1,6 @@
 $open-sans: 'Open Sans', sans-serif;
 $lora-serif: 'Lora', serif;
+$oxygen-mono: 'Oxygen Mono', monospace;
 
 $fonts: (
  open-sans: (
@@ -7,6 +8,9 @@ $fonts: (
  ),
  lora-serif: (
    default: '"Lora", serif'
+ ),
+ oxygen-mono: (
+   default: '"Oxygen Mono", monospace'
  ),
 );
 
@@ -195,6 +199,6 @@ a {
       margin-right: rem(140);
     }  
   }
-  
 }
+
 
