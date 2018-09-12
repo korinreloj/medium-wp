@@ -67,7 +67,7 @@
      
         <?php case 'code_block':?>
           <div class="code_block">
-            <?php the_sub_field('code_block');?>
+            <?php echo '<pre>' . get_sub_field('code_block') . '</pre>';?>
           </div>
         <?php break;?>
             
