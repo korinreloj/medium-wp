@@ -1,6 +1,7 @@
 $open-sans: 'Open Sans', sans-serif;
 $lora-serif: 'Lora', serif;
 $oxygen-mono: 'Oxygen Mono', monospace;
+$times: 'Times';
 
 $fonts: (
  open-sans: (
@@ -12,6 +13,9 @@ $fonts: (
  oxygen-mono: (
    default: '"Oxygen Mono", monospace'
  ),
+ times: (
+   default: 'Times'
+  ),
 );
 
 h1,

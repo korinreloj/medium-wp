@@ -1,0 +1,125 @@
+.image-cta{
+	background-color: #E8F3EC;
+	padding: rem(36);
+	display: flex;
+
+	@include tablet{
+		margin-top: rem(24);
+	}
+
+	@include desktop{
+		margin-top: rem(40);
+		margin-left: rem(20);
+		margin-right: rem(20);
+		padding: rem(16);
+	}
+
+	&__content{
+		@include desktop{
+			width: 500 / 1020 * 100vw;	
+			padding: rem(40);
+		}
+	}
+
+	&__image{
+		display: none;
+
+		@include desktop{
+			display: flex;
+			margin-left: auto;
+
+			img{
+				width: 32vw;
+				height: 32vw;
+			}
+		}
+	}
+
+	&__topCaption{
+		font-family: $times;
+		font-size: rem(29);
+		padding-bottom: rem(8);
+
+		@include tablet{
+			font-size: rem(34);
+		}
+
+		@include desktop{
+			font-size: rem(49);
+		}
+	}
+
+	&__bottomCaption{
+		font-family: $open-sans;
+		font-size: rem(16);	
+		letter-spacing: rem(-0.42);
+		color: $color-grey-dark;
+		padding-bottom: rem(20);
+
+		@include tablet{
+			font-size: rem(18);
+		}
+
+		@include desktop{
+			font-size: rem(19);
+			padding-bottom: rem(40);
+		}
+
+	}
+
+	&__buttons{
+		.start{
+			background-color: $color-black;
+			color: $color-white;
+			font-size: rem(13);
+			font-family: $open-sans;
+			padding: rem(6) rem(15);
+			border-radius: rem(5);
+			letter-spacing: rem(-0.42);
+
+			@include tablet{
+				font-size: rem(14);
+				padding: rem(8) rem(18);
+			}
+
+			@include desktop{
+				padding: rem(9) rem(19);
+			}
+		}
+
+		.learn{
+			background-color: transparent;
+			color: $color-grey;
+			font-size: rem(13);
+			font-family: $open-sans;
+			padding: rem(6) rem(15);
+			border-radius: rem(5);
+			border-color: $color-black;
+			letter-spacing: rem(-0.42);
+
+			@include tablet{
+				font-size: rem(14);
+				padding: rem(8) rem(18);
+			}
+
+			@include desktop{
+				padding: rem(9) rem(19);
+			}
+		}
+	}
+}
+
+.divider{
+	width: 288 / 320 * 100vw;
+	margin: auto;
+	margin-top: rem(24);
+	border-bottom: rem(1) solid rgba(0, 0, 0, .15);
+
+	@include tablet{
+		width: 728 / 760 * 100vw;
+	}
+
+	@include desktop{
+		margin-top: rem(58);
+	}
+}
