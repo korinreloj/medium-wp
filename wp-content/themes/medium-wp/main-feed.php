@@ -32,13 +32,20 @@
     $content= get_the_content();
     $author = get_field('author');
     $time = get_the_time('M j, Y');
+
+    if (strlen($sub_title) > 50) {
+      $ellipsis_string_sub = substr($sub_title, 0, 100) . "...";
+     }
+     else {
+      $ellipsis_string_sub = $sub_title;
+     }
   ?>
     
   <article class="main-feed__container">
     <div class="main-feed__content">
       <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3 class="main-feed__title"><?php echo $title ?></h3></a>
       
-      <p class="main-feed__description"><?php echo $sub_title; ?></p>
+      <p class="main-feed__description"><?php echo $ellipsis_string_sub; ?></p>
 
       <div class="main-feed__details-container">
         <div class="main-feed__author-content">

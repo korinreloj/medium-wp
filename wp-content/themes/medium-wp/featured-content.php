@@ -3,16 +3,16 @@
 
     <!-- large card -->
     <article class="featured-content__cards__large">
-      <figure class="featured-content__cards__large__image">
+    	<figure class="featured-content__cards__large__image">
         <a href="#">
-          <img src="https://cdn-images-1.medium.com/focal/832/302/45/56/1*bnLe5b0ELyYs_rTY5kvMng.jpeg">
+    		  <img src="https://cdn-images-1.medium.com/focal/832/302/45/56/1*bnLe5b0ELyYs_rTY5kvMng.jpeg">
         </a>
-      </figure>
-      <div class="featured-content__cards__large__details">
+    	</figure>
+    	<div class="featured-content__cards__large__details">
         <a href="#">
-          <h2 class="large-title">
-            Words of Wisdom From the American Jazz and Negro League Baseball Museum Host
-          </h2> 
+      		<h2 class="large-title">
+      			Words of Wisdom From the American Jazz and Negro League Baseball Museum Host
+      		</h2> 
         </a>
         <p>
           Ronnie Matloch loves talking history almost as much as he loves people
