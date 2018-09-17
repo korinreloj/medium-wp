@@ -75,6 +75,7 @@
 			font-family: $open-sans;
 			padding: rem(6) rem(15);
 			border-radius: rem(5);
+			border-width: rem(1);
 			letter-spacing: rem(-0.42);
 
 			@include tablet{
@@ -94,6 +95,7 @@
 			font-family: $open-sans;
 			padding: rem(6) rem(15);
 			border-radius: rem(5);
+			border-width: rem(1);
 			border-color: $color-black;
 			letter-spacing: rem(-0.42);
 
