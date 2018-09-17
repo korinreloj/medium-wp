@@ -96,5 +96,9 @@
 
   <?php endif; ?>
 
-  <?php endif; get_footer(); ?>
+  <?php endif; 
+  include 'inline-image__full.php';
+  include 'inline-image__large.php';
+  include 'inline-image__regular.php';
+  get_footer(); ?>
 </div>
