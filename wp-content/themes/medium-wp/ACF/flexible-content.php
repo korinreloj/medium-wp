@@ -1,13 +1,13 @@
 <?php
 
-if(function_exists("register_field_group"))
-{
-	register_field_group(array (
-		'id' => 'acf_article-fields',
-		'title' => 'Article Fields',
+if( function_exists('acf_add_local_field_group') ):
+
+	acf_add_local_field_group(array(
+		'key' => 'group_5b9f3cd412d7d',
+		'title' => 'Flexible Content',
 		'fields' => array(
 			array(
-				'key' => 'field_5b73e5700bbf5',
+				'key' => 'field_5b9f3cdca394e',
 				'label' => 'Flexible content field',
 				'name' => 'flexible_content_field',
 				'type' => 'flexible_content',
@@ -20,14 +20,14 @@ if(function_exists("register_field_group"))
 					'id' => '',
 				),
 				'layouts' => array(
-					'5b73e59450e31' => array(
-						'key' => '5b73e59450e31',
+					'5b9f3ce2d650b' => array(
+						'key' => '5b9f3ce2d650b',
 						'name' => 'header_text',
 						'label' => 'Header Text',
 						'display' => 'block',
 						'sub_fields' => array(
 							array(
-								'key' => 'field_5b73eb58f294f',
+								'key' => 'field_5b9f3d9fa394f',
 								'label' => 'Header Text',
 								'name' => 'header_text',
 								'type' => 'text',
@@ -49,14 +49,14 @@ if(function_exists("register_field_group"))
 						'min' => '',
 						'max' => '',
 					),
-					'5b73eb1af294e' => array(
-						'key' => '5b73eb1af294e',
+					'5b9f3db7a3950' => array(
+						'key' => '5b9f3db7a3950',
 						'name' => 'text_block',
 						'label' => 'Text Block',
 						'display' => 'block',
 						'sub_fields' => array(
 							array(
-								'key' => 'field_5b73eb6cf2950',
+								'key' => 'field_5b9f3dc7a3951',
 								'label' => 'Text Block',
 								'name' => 'text_block',
 								'type' => 'text',
@@ -78,14 +78,14 @@ if(function_exists("register_field_group"))
 						'min' => '',
 						'max' => '',
 					),
-					'5b73eb18f294d' => array(
-						'key' => '5b73eb18f294d',
+					'5b9f40f466fe7' => array(
+						'key' => '5b9f40f466fe7',
 						'name' => 'code_block',
 						'label' => 'Code Block',
 						'display' => 'block',
 						'sub_fields' => array(
 							array(
-								'key' => 'field_5b73eb7ff2951',
+								'key' => 'field_5b9f410266fe8',
 								'label' => 'Code Block',
 								'name' => 'code_block',
 								'type' => 'textarea',
@@ -107,14 +107,14 @@ if(function_exists("register_field_group"))
 						'min' => '',
 						'max' => '',
 					),
-					'5b73eb16f294c' => array(
-						'key' => '5b73eb16f294c',
+					'5b9f410c66fe9' => array(
+						'key' => '5b9f410c66fe9',
 						'name' => 'image',
 						'label' => 'Image',
 						'display' => 'block',
 						'sub_fields' => array(
 							array(
-								'key' => 'field_5b73eb90f2952',
+								'key' => 'field_5b9f412666feb',
 								'label' => 'Image_regular',
 								'name' => 'image_regular',
 								'type' => 'image',
@@ -138,7 +138,7 @@ if(function_exists("register_field_group"))
 								'mime_types' => '',
 							),
 							array(
-								'key' => 'field_5b9f07b0845b2',
+								'key' => 'field_5b9f414d66fec',
 								'label' => 'Image_large',
 								'name' => 'image_large',
 								'type' => 'image',
@@ -162,7 +162,7 @@ if(function_exists("register_field_group"))
 								'mime_types' => '',
 							),
 							array(
-								'key' => 'field_5b9f07c3845b3',
+								'key' => 'field_5b9f416266fed',
 								'label' => 'Image_full',
 								'name' => 'image_full',
 								'type' => 'image',
@@ -189,14 +189,14 @@ if(function_exists("register_field_group"))
 						'min' => '',
 						'max' => '',
 					),
-					'5b73ec1cdb9d3' => array(
-						'key' => '5b73ec1cdb9d3',
+					'5b9f412166fea' => array(
+						'key' => '5b9f412166fea',
 						'name' => 'embed',
 						'label' => 'Embed',
 						'display' => 'block',
 						'sub_fields' => array(
 							array(
-								'key' => 'field_5b73ec29db9d4',
+								'key' => 'field_5b9f419066fee',
 								'label' => 'Embed',
 								'name' => 'embed',
 								'type' => 'text',
@@ -224,89 +224,23 @@ if(function_exists("register_field_group"))
 				'max' => '',
 			),
 		),
-		'location' => array (
-			array (
-				array (
+		'location' => array(
+			array(
+				array(
 					'param' => 'post_type',
 					'operator' => '==',
 					'value' => 'post',
-					'order_no' => 0,
-					'group_no' => 0,
 				),
-			),
-		),
-		'options' => array (
-			'position' => 'acf_after_title',
-			'layout' => 'no_box',
-			'hide_on_screen' => array (
-				0 => 'the_content',
 			),
 		),
 		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => 1,
+		'description' => '',
 	));
-	register_field_group(array (
-		'id' => 'acf_breaker',
-		'title' => 'Breaker',
-		'fields' => array (
-			array (
-				'key' => 'field_5b694ad065126',
-				'label' => 'Breaker Title',
-				'name' => 'breaker_title',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_5b693c5664833',
-				'label' => 'Breaker Image',
-				'name' => 'breaker_image',
-				'type' => 'image',
-				'save_format' => 'object',
-				'preview_size' => 'full',
-				'library' => 'all',
-			),
-			array (
-				'key' => 'field_5b693d3064835',
-				'label' => 'Description',
-				'name' => 'description',
-				'type' => 'wysiwyg',
-				'default_value' => '',
-				'toolbar' => 'full',
-				'media_upload' => 'yes',
-			),
-			array (
-				'key' => 'field_5b693cc464834',
-				'label' => 'CTA Link',
-				'name' => 'cta_link',
-				'type' => 'page_link',
-				'post_type' => array (
-					0 => 'all',
-				),
-				'allow_null' => 0,
-				'multiple' => 0,
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'page',
-					'operator' => '==',
-					'value' => '3',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'no_box',
-			'hide_on_screen' => array (
-			),
-		),
-		'menu_order' => 0,
-	));
-}
+	
+	endif;
