@@ -77,13 +77,6 @@ if( function_exists('acf_add_local_field_group') ):
 					'value' => 'post',
 				),
 			),
-			array(
-				array(
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'page',
-				),
-			),
 		),
 		'menu_order' => 0,
 		'position' => 'normal',

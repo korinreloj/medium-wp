@@ -134,13 +134,12 @@
 		}
 
 		footer {
-			width: 184 / 320 * 100vw;
 			display: flex;
 
 			.footer-content{
 				padding-right: rem(16);
 				a{
-					font-size: rem(16);
+					font-size: rem(14);
 					font-family: 'Open Sans', sans-serif;
 					color: $color-black;
 				}
@@ -263,7 +262,7 @@
 		}
 
 		.subtitle{
-			margin-top: rem(2);
+			margin-top: rem(8);
 			margin-bottom: 0;
 			width: 184 / 320 * 100vw;
 
@@ -409,6 +408,7 @@
 				font-weight: bold;				
 				letter-spacing: rem(-0.42);
 				color: $color-black;
+				margin-bottom: rem(10);
 			}
 
 			.subtitle{
@@ -425,7 +425,7 @@
 				.footer-content{
 					font-size: rem(15);
 					a{
-						font-size: rem(15);
+						font-size: rem(14);
 						font-family: 'Open Sans', sans-serif;
 						color: $color-black;
 					}
