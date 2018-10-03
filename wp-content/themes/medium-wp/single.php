@@ -8,13 +8,7 @@
   $author = get_field('author');
   $time = get_the_time('M j, Y');
 
-  $first_name = get_the_author_meta('first_name');
-  $last_name = get_the_author_meta('last_name');
-  $description = get_the_author_meta('description');
   $profile_picture = get_avatar('ID');
-
-  $icon_image = get_field('image_icon');
-  $Description = get_field('description');
 ?>
 
 <div class="article_page">
@@ -22,13 +16,11 @@
 <!-- Author -->
   <div class="author_info">
     <div class="author_icon">
-      <img src="<?php //echo $icon_image['url']; ?>" alt="">
       <?php echo "$profile_picture"; ?>
     </div>
     <div class="author_details">
       <div class="author">
-        <?php echo $author; ?>
-        <?php //echo "$first_name $last_name"; ?>  
+        <?php include 'author.php' ?>
         <button class= "follow_button">
           Follow
         </button>  

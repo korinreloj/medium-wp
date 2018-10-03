@@ -2,6 +2,7 @@
   global $post;
   $featured_articles = get_field('featured_articles');
   $featured_count = count($featured_articles);
+  
 ?>
 
 <div class="featured-content">
@@ -17,8 +18,11 @@
         $thumbnail_image = get_field('image');
         $sub_title = get_field('sub_title');
         $content= get_the_content();
-        $author = get_field('author');
         $time = get_the_time('M j, Y');
+        $author_ID = get_the_author_meta('ID');
+        $profile = get_field('user_profile' , "user_$author_ID");
+        $profile_id = $profile->ID;
+        $author= get_the_title($profile_id);
 
         if (strlen($sub_title) > 43):
           $ellipsis_string_sub = substr($sub_title, 0, 43) . "...";
@@ -44,7 +48,11 @@
           </p>
           <footer>
             <div class="footer-content">
-              <p> <a href="#"><?php echo $author; ?></a> in <a href="#">Place</a> </p>
+              <?php if( $author_ID && $profile ): ?>
+                <p> 
+                  <a href="<?php the_permalink($profile_id); ?>"><?php echo $author; ?></a> in <a href="#">Place</a>
+                </p>
+              <?php endif; ?>
               <p class="add-details">
                 <a href="#"><?php echo $time; ?></a>
               </p>
@@ -70,8 +78,11 @@
               $thumbnail_image = get_field('image');
               $sub_title = get_field('sub_title');
               $content= get_the_content();
-              $author = get_field('author');
               $time = get_the_time('M j, Y');
+              $author_ID = get_the_author_meta('ID');
+              $profile = get_field('user_profile' , "user_$author_ID");
+              $profile_id = $profile->ID;
+              $author = get_the_title($profile_id);
 
               if (strlen($sub_title) > 43):
                 $subtitle = substr($sub_title, 0, 43) . "...";
@@ -114,10 +125,14 @@
 
                 <footer>
                   <div class="footer-content">
-                  <p> <a href="#"><?php echo $author; ?></a> in <a href="#">Place</a> </p>
-                  <p class="add-details">
-                    <a href="#"><?php echo $time; ?></a>
-                  </p>
+                    <?php if( $author_ID && $profile ): ?>
+                      <p> 
+                        <a href="<?php the_permalink($profile_id); ?>"><?php echo $author; ?></a> in <a href="#">Place</a>
+                      </p>
+                    <?php endif; ?>
+                    <p class="add-details">
+                      <a href="#"><?php echo $time; ?></a>
+                    </p>
                   </div>
                 </footer>
               </div>
@@ -143,8 +158,11 @@
         $thumbnail_image = get_field('image');
         $sub_title = get_field('sub_title');
         $content= get_the_content();
-        $author = get_field('author');
         $time = get_the_time('M j, Y');
+        $author_ID = get_the_author_meta('ID');
+        $profile = get_field('user_profile' , "user_$author_ID");
+        $profile_id = $profile->ID;
+        $author = get_the_title($profile_id);
         
         if (strlen($sub_title) > 43):
           $ellipsis_string_sub = substr($sub_title, 0, 43) . "...";
@@ -172,10 +190,14 @@
             
             <footer>
               <div class="footer-content">
-              <p> <a href="#"><?php echo $author; ?></a> in <a href="#">Place</a> </p>
-              <p class="add-details">
-                <a href="#"><?php echo $time; ?></a>
-              </p>
+                <?php if( $author_ID && $profile ): ?>
+                  <p> 
+                    <a href="<?php the_permalink($profile_id); ?>"><?php echo $author; ?></a> in <a href="#">Place</a>
+                  </p>
+                <?php endif; ?>
+                <p class="add-details">
+                  <a href="#"><?php echo $time; ?></a>
+                </p>
               </div>
             </footer>
           </div>
