@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<?php wp_list_categories(); ?>
 
 <?php
   include 'featured-content.php';
