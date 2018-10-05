@@ -1,4 +1,3 @@
-
 <section class="feed-sidebar">
   <div class="feed-sidebar__nav">
     <div class="feed-sidebar__heading">

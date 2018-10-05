@@ -1,56 +1,48 @@
+<?php
+  //include 'single.php';
+?>
+
 <?php get_header(); if(have_posts()): the_post(); ?>
 
 <?php
-$title = get_the_title();
-$hero_image = get_field('hero_image');
-$sub_title = get_field('sub_title');
-$heading_text= get_field('heading_text');
+  $title = get_the_title();
+  $hero_image = get_field('hero_image');
+  $sub_title = get_field('sub_title');
+  $text_block = get_field('text_block');
+  $inline_image_large = get_field('inline_image_large');
+  $inline_image_full = get_field('inline_image_full');
+  $embed = get_field('oembed');
+  $first_name = get_the_author_meta('first_name');
+  $last_name = get_the_author_meta('last_name');
+  $description = get_the_author_meta('description');
+  $profile_picture = get_avatar('ID');
+
+  $breaker_image = get_field('breaker_image');
+  $breaker_title = get_field('breaker_title');
+  $cta_description = get_field('description');
+  $cta_link = get_field('cta_link');
 ?>
 
-<?php if( have_rows('flexible_content_field') ): ?>
+  <img src="<?php echo $hero_image['url']; ?>" alt="">
 
-<ul class="slides">
+  <h1 class="article-title"><?php echo $title; ?></h1>
+  <h2 class="article-subtitle"><?php echo $sub_title; ?></h2>
+  <p class="article-textblock"><?php echo $text_block; ?></p>
 
-<?php while( have_rows('flexible_content_field') ): the_row(); ?>
+  <img src="<?php echo $inline_image_large['url']; ?>" alt="">
 
-    <?php  if( get_row_layout() == 'header_text' ): 
-      the_sub_field('header_text');
-    ?>
-
-    <?php elseif( get_row_layout() == 'text_block' ): 
-      the_sub_field('text_block');
-    ?>
-
-    <?php elseif( get_row_layout() == 'code_block' ): ?>
-      <pre><?php the_sub_field('code_block'); ?></pre>
-          
-    <?php elseif( get_row_layout() == 'image' ): $image = get_sub_field('image'); ?>
-      <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="">
-
-    <?php elseif( get_row_layout() == 'embed' ): ?>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php the_sub_field('embed'); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-    
-    <?php endif; ?>
-
-<?php endwhile; ?>
-
-</ul>
-
-<?php endif; ?>
 
   <div class="article-content">
     <?php /*the_content(); */?>
   </div>
 
-  <footer>
-    <?php echo "$profile_picture"; ?>
-    <br>
-    <?php echo "$first_name $last_name"; ?>
-    <br>
-    <?php echo "$description"; ?>
+  <div class="breaker">
+    <p class="article-description">
+      <img src="<?php echo $breaker_image['url']; ?>" alt="">
+      <br>
+      <?php echo "$breaker_title $cta_description"; ?>
+    </p>
+  </div>
 
-  </footer>
 
 <?php endif; get_footer(); ?>
