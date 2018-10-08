@@ -113,8 +113,9 @@
     }
   ?>
 
-<?php endwhile; ?>
+  <?php endwhile; ?>
 
 <?php endif; ?>
 
-<?php endif; get_footer(); ?>
+  <?php endif; get_footer(); ?>
+</div>
