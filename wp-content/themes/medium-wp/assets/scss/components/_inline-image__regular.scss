@@ -1,4 +1,4 @@
-.inline-image__large {
+.inline-image__regular {
 
 	margin-top: rem(52);
 	margin-bottom: rem(52);
@@ -6,12 +6,12 @@
 	&__image-container {
 		width: 100%;
 		overflow: hidden;
-		
+
 		margin-right: auto;
 		margin-left: auto;
 
 		@include desktop {
-			width: 860 / 1020 * 100vw;
+			width: 700 / 1020 * 100vw;
 		}
 	}
 
@@ -33,4 +33,5 @@
 			text-align: center;
 		}
 	}
+
 }

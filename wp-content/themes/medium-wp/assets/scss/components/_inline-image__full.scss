@@ -1,5 +1,8 @@
 .inline-image__full {
 	
+	margin-top: rem(52);
+	margin-bottom: rem(52);
+
 	&__image-container {
 		width: 100%;
 		overflow: hidden;
@@ -19,7 +22,8 @@
 		padding-left: rem(30);
 
 		p {
-			font-size: rem(14);
+			font-size: rem(13);
+			color: rgba(0,0,0,.68);
 			text-align: center;
 		}
 	}
