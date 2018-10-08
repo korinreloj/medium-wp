@@ -101,4 +101,5 @@
   include 'inline-image__large.php';
   include 'inline-image__regular.php';
   get_footer(); ?>
+
 </div>
