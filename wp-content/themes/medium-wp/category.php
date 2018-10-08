@@ -1,10 +1,6 @@
 <section class="main-feed">
 
-<?php query_posts([ 
-    'post_type' => 'post',
-    'posts_per_page' => 3, // number of posts that will be displayed
-    'category_name' => 'design'
-  ]); ?>
+<?php ?>
 
   <div class="main-feed__nav">
     <div class="main-feed__heading">
@@ -59,9 +55,6 @@
             <a class="main-feed__place" href="#">Place</a>
           </p>
           <p class="main-feed__sub">
-            <a href="#">
-              <?php echo $time; ?>
-            </a>
           </p>
         </div>
       </div>  
