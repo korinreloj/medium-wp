@@ -49,7 +49,7 @@
 
       <div class="main-feed__details-container">
         <div class="main-feed__author-content">
-          <p class="main-feed__author"><?php echo $author; ?> in <a class="main-feed__place" href="#">Place</a></p>
+          <p class="main-feed__author"><a href="#"><?php echo $author; ?></a> in <a class="main-feed__place" href="#">Place</a></p>
           <p class="main-feed__sub">
             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
               <?php echo $time; ?>

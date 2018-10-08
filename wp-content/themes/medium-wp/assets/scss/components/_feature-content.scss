@@ -138,7 +138,7 @@
 
 			.footer-content{
 				padding-right: rem(16);
-				a{
+				a, p{
 					font-size: rem(14);
 					font-family: 'Open Sans', sans-serif;
 					color: $color-black;
@@ -149,10 +149,6 @@
 				margin-top: rem(16);
 				margin-bottom: 0;
 				width: 143 / 320 * 100vw;
-
-				font-size: rem(13);
-				font-family: 'Open Sans', sans-serif;
-				color: $color-black;
 
 				@include tablet{
 					width: 304 / 760 * 100vw;
@@ -299,7 +295,6 @@
 			}
 
 			p{
-				// margin-top: rem(16);
 				margin-bottom: 0;
 				width: 143 / 320 * 100vw;
 
@@ -348,6 +343,7 @@
 		margin: 0;
 		margin-bottom: rem(16);
 		width: 80 / 320 * 100vw;
+		max-width: rem(150);
 		min-height: rem(80);
 		max-height: rem(80);
 
@@ -360,9 +356,17 @@
 
 		@include tablet{
 			width: 100 / 760 * 100vw;
+			max-width: none;
 			min-height: rem(100);
 			@include aspect-ratio(100, 100);
 			margin-bottom: 0;
+		}
+
+		@include desktop{
+			width: 100 / 1020 * 100vw;
+			min-height: rem(100);
+			max-height: rem(100);
+			max-width: none;
 		}
 	}
 
@@ -424,7 +428,7 @@
 
 				.footer-content{
 					font-size: rem(15);
-					a{
+					a, p{
 						font-size: rem(14);
 						font-family: 'Open Sans', sans-serif;
 						color: $color-black;
@@ -478,7 +482,7 @@
 		}
 
 		a:hover{
-			color: #027758;
+			color: $color-green;
 			/* change the color 
 			when Sam changes the colors for link*/
 		}
