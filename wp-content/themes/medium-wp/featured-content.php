@@ -73,7 +73,6 @@
               $author = get_field('author');
               $time = get_the_time('M j, Y');
 
-
               if (strlen($sub_title) > 50):
                 $ellipsis_string_sub = substr($sub_title, 0, 100) . "...";
               else:

@@ -34,7 +34,7 @@
    		padding-left: rem(15);
    		width: 209 / 320 * 100vw;
 
-    	font-size: rem(14);
+    	font-size: rem(13);
     	font-family: $open-sans;
 			
 			button{
@@ -45,11 +45,12 @@
     		button{
     			display: inline;
 	    		border-color: $color-grey;
+				border-width: rem(1);
 	    		margin-left: rem(6);
 	    		padding-right: rem(10);
 	    		padding-left: rem(10);
 			    cursor: pointer;
-			    font-size: rem(14);
+			    font-size: rem(13);
 			    border-radius: rem(5);
 			    color: $color-grey;
 	    	}

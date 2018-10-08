@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
     <title><?php bloginfo('name'); ?></title>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/css/styles.css?v=<?php echo date('timestamp]'); ?>">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/css/styles.css">
 
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,600,700,800" rel="stylesheet">
 
@@ -18,15 +18,14 @@
   <body <?php body_class(); ?> >
     
   <header class="header">
-    <div class="header__content">
-      <a class="header__link-left" href="#0">Become a member</a>
+  	<div class="header__content">
       <h1>Medium</h1>
-
-      <div class="header__link">
+      <!-- <a href="header__link">Become a member</a> -->
+      <div class="header__link-right">
         <i class="fa fa-search"></i>
-        <a class="header__link-right" href="#0">Sign in</a>
-       <button class="header__button">Get Started</button>
+        <button class="header__button">Get Started</button>
       </div>
     </div>
   </header>
+
   <main>
