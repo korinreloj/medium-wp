@@ -1,18 +1,18 @@
 @function rem($target) {
-  $max: length($target);
-  $values: ();
-  $context: if(variable-exists(base-font-size), $base-font-size, 16);
+$max: length($target);
+$values: ();
+$context: if(variable-exists(base-font-size), $base-font-size, 16);
 
-  @for $i from 1 through $max {
-    $x: (nth($target, $i) / $context) * 1rem;
+@for $i from 1 through $max {
+  $x: (nth($target, $i) / $context) * 1rem;
 
-    @if abs($x) == 0 {
-      $values: append($values, 0);
-    }
-    @else {
-      $values: append($values, $x);
-    }
+  @if abs($x) == 0 {
+    $values: append($values, 0);
   }
+  @else {
+    $values: append($values, $x);
+  }
+}
 
-  @return $values;
+@return $values;
 }
