@@ -1,41 +1,18 @@
 .inline-image__large {
-	display: flex;
-	flex-direction: column-reverse;
 
-	@include desktop {
-		margin-right: rem(50);
-		margin-left: rem(50);
-		flex-direction: row;
-	}
-
-	&__content {
-		padding-top: rem(30);
-		padding-right: rem(16);
-		padding-left: rem(16);
-	}
+	margin-top: rem(52);
+	margin-bottom: rem(52);
 
 	&__image-container {
 		width: 100%;
-		height: rem(300);
-		@include aspect-ratio(320, 300);
 		overflow: hidden;
+		
+		margin-right: auto;
+		margin-left: auto;
 
 		@include desktop {
-			width: 556 / 1020 * 100vw;
-			height: rem(500);
-			@include aspect-ratio(556, 500);
+			width: 860 / 1020 * 100vw;
 		}
-	}
-
-	&__image-caption {
-		p {
-			font-size: rem(14);
-			text-align: center;
-		}
-	}
-
-	&__caption {
-		text-transform: uppercase;
 	}
 
 	img {
@@ -44,11 +21,16 @@
 		object-fit: cover;
 	}	
 
-	p {
+	&__image-caption{
 		margin-top: rem(10);
-	}
+		padding-right: rem(30);
+		padding-bottom: rem(10);
+		padding-left: rem(30);
 
-	h1 {
-		margin-bottom: 0;
+		p {
+			font-size: rem(13);
+			color: rgba(0,0,0,.68);
+			text-align: center;
+		}
 	}
 }
