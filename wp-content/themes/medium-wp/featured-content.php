@@ -26,7 +26,6 @@
           $ellipsis_string_sub = $sub_title;
         endif;
     ?>
-
       <article class="featured-content__cards__large">
         <figure class="featured-content__cards__large__image">
           <a href="<?php the_permalink(); ?>">
@@ -72,7 +71,6 @@
               $content= get_the_content();
               $author = get_field('author');
               $time = get_the_time('M j, Y');
-
 
               if (strlen($sub_title) > 50):
                 $ellipsis_string_sub = substr($sub_title, 0, 100) . "...";
