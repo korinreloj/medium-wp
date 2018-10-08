@@ -1,0 +1,43 @@
+.search-page{
+	&__bar{
+		padding: 0 rem(20) 0 rem(20);
+		width: 0;
+		height: 0;
+		transition: height 0.8s ease;
+		background-color: $color-white;
+		z-index: 1;
+
+		input:focus{
+	      outline-width: 0;
+	    }
+
+	    ::placeholder{
+	      color: $color-grey;
+	    }
+
+	    &.insert-full__styling{
+			width: 100vw;
+		}
+
+		.submitSearch{
+			display: none;
+		}
+	}
+
+	&__search{
+		border: none;
+		border-bottom: 1px solid rgba(0,0,0,.15);
+    	font-size: rem(30);
+   		font-family: $open-sans;
+		letter-spacing: rem(-0.42);
+	   	line-height: rem(48);
+   		width: 100%;
+  		color: $color-black;
+	}
+
+	.insert-width{
+		width: 215 / 1020 * 100vw;
+	}
+
+	
+}

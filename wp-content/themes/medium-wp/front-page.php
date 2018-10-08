@@ -1,10 +1,19 @@
 <?php get_header(); ?>
 
-<section class="content">
-</section>
+
 <?php
- get_header();
- // @include 'category-nav.php';
- // @include 'featured-content.php';
+  include 'category-nav.php';
+  include 'search.php';
+  include 'featured-content.php';
 ?>
+
+
+<section class="content">
+<?php
+  include 'main-feed.php';
+  include 'feed-sidebar.php';
+?>
+</section>
+
 <?php get_footer(); ?>
+

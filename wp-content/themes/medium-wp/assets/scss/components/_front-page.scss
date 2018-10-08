@@ -2,7 +2,7 @@
 	display: flex;
 
 	@include desktop {
-		margin-right: 120 / 1020 * 100vw;
-		margin-left: 120 / 1020 * 100vw;
+		margin-right: rem(120);
+		margin-left: rem(120);
 	}
 }

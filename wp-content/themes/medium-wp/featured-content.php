@@ -1,112 +1,170 @@
+<?php
+ global $post;
+ $featured_articles = get_field('featured_articles');
+ $featured_count = count($featured_articles);
+?>
 <div class="featured-content">
-	<section class="featured-content__cards">
-
-    <!-- large card -->
-    <article class="featured-content__cards__large">
-    	<figure class="featured-content__cards__large__image">
-    		<img src="https://cdn-images-1.medium.com/focal/832/302/45/56/1*bnLe5b0ELyYs_rTY5kvMng.jpeg">
-    	</figure>
-    	<div class="featured-content__cards__large__details">
-        <a href="#">
-      		<h2 class="large-title">
-      			Words of Wisdom From the American Jazz and Negro League Baseball Museum Host
-      		</h2>
-          <p>
-            Ronnie Matloch loves talking history almost as much as he loves people
-          </p>
-        </a>
-        <footer>
-          <p><a href="#">Josh S. Rose</a> in <a href="#">America at Work</a></p>
-        </footer>
-
+  <section class="featured-content__cards">
+  <!-- large card -->
+  <?php
+   if($featured_articles):
+    $post = $featured_articles[0];
+    setup_postdata($post);
+    
+    $title = get_the_title();
+    $thumbnail_image = get_field('image');
+    $sub_title = get_field('sub_title');
+    $content= get_the_content();
+    $author = get_field('author');
+    $time = get_the_time('M j, Y');
+    if (strlen($sub_title) > 50):
+     $ellipsis_string_sub = substr($sub_title, 0, 100) . "...";
+    else:
+     $ellipsis_string_sub = $sub_title;
+    endif;
+  ?>
+   <article class="featured-content__cards__large">
+    <figure class="featured-content__cards__large__image">
+     <a href="<?php the_permalink(); ?>">
+      <img src="<?php echo $thumbnail_image['sizes']['thumbnail']; ?>">
+     </a>
+    </figure>
+    <div class="featured-content__cards__large__details">
+     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+      <h2 class="large-title">
+       <?php echo $title ?>
+      </h2> 
+     </a>
+     <p class="subtitle">
+      <?php echo $ellipsis_string_sub; ?>
+     </p>
+     <footer>
+      <div class="footer-content">
+       <p> <a href="#"><?php echo $author; ?></a> in <a href="#">Place</a> </p>
+       <p class="add-details">
+        <a href="#"><?php echo $time; ?></a>
+       </p>
       </div>
-    </article>
-
-
-    <!-- small cards -->
-    <div class="featured-content__smallContainer">
-      <article class="featured-content__cards__small">
-        <div class="featured-content__cards__small__details">
-          <a href="#">
-            <h3 class ="small-title">
-              What I Learned from Gods Who Don’t Exist
-            </h3>
-            <p class="subtitle">
-              Ronnie Matloch loves talking history almost as much as he loves people
-            </p>
-          </a>
-          <footer>
-            <p><a href="#">Josh S. Rose</a></p>
-          </footer>
-      	</div>
-
-        <figure class="featured-content__cards__small__image">
-          <img src="https://cdn-images-1.medium.com/focal/100/100/50/41/1*d7NgHQo_Zp46_Ss0_8qgyw.gif">
-        </figure>
-      </article>
-
-      <article class="featured-content__cards__small">
-        <div class="featured-content__cards__small__details">
-          <a href="#">
-            <h3 class ="small-title">
-              What I Learned from Gods Who Don’t Exist
-            </h3>
-          </a>
-          <footer>
-            <p><a href="#">Josh S. Rose</a> in <a href="#">America at Work</a></p>
-          </footer>
-        </div>
-
-        <figure class="featured-content__cards__small__image">
-          <img src="https://cdn-images-1.medium.com/focal/100/100/51/63/0*XF3aw52-Rq_42nR2">
-        </figure>
-      </article>
-
-      <article class="featured-content__cards__small">
-        <div class="featured-content__cards__small__details">
-          <a href="#">
-            <h3 class ="small-title">
-              What I Learned from Gods Who Don’t Exist
-            </h3>
-          </a>
-          <footer>
-            <p><a href="#">Josh S. Rose</a> in <a href="#">America at Work</a></p>
-          </footer>
-        </div>
-
-        <figure class="featured-content__cards__small__image">
-          <img src="https://cdn-images-1.medium.com/focal/100/100/51/63/0*XF3aw52-Rq_42nR2">
-        </figure>
-      </article>
+     </footer>
     </div>
-
-    <!-- medium card -->
-    <div class="featured-content__cards__mediumContainer">
-    	<article class="featured-content__cards__medium">
-      <figure class="featured-content__cards__medium__image">
-        <img src="https://cdn-images-1.medium.com/focal/832/302/45/56/1*bnLe5b0ELyYs_rTY5kvMng.jpeg">
-      </figure>
-      <div class="featured-content__cards__medium__details">
-        <a href="#">
-          <h2 class="medium-title">
-            Words of Wisdom From the American Jazz and Negro League Baseball Museum Host
-          </h2>
-          <p class="subtitle">
-            Ronnie Matloch loves talking history almost as much as he loves people
-          </p>
+   </article>
+  <?php endif; wp_reset_postdata(); ?>
+  <!-- small card -->
+   <div class="featured-content__smallContainer">
+    <?php
+     if($featured_count > 1):
+      $middle_max = ($featured_count - 1);
+      $i = 1;
+      do{
+       $post = $featured_articles[$i];
+       setup_postdata($post);
+       $i++;
+       $title = get_the_title();
+       $thumbnail_image = get_field('image');
+       $sub_title = get_field('sub_title');
+       $content= get_the_content();
+       $author = get_field('author');
+       $time = get_the_time('M j, Y');
+       if (strlen($sub_title) > 50):
+        $ellipsis_string_sub = substr($sub_title, 0, 43) . "...";
+       else:
+        $ellipsis_string_sub = $sub_title;
+       endif;
+    ?>
+    
+      <article class="featured-content__cards__small">
+       <div class="featured-content__cards__small__details">
+        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+        <?php
+         if ($sub_title != ""):
+         ?>
+         <h3 class ="small-title">
+          <?php echo $title ?>
+         </h3>
         </a>
+         <p class="subtitle">
+          <?php echo $ellipsis_string_sub; ?>
+         </p>
+         <?php
+         else:
+        ?>
+          <h3 class ="small-title without-sub">
+           <?php echo $title ?>
+          </h3>
+        <?php
+         endif;
+        ?>
         <footer>
-          <p><a href="#">Josh S. Rose</a> in <a href="#">America at Work</a></p>
+         <div class="footer-content">
+         <p> <a href="#"><?php echo $author; ?></a> in <a href="#">Place</a> </p>
+         <p class="add-details">
+          <a href="#"><?php echo $time; ?></a>
+         </p>
+         </div>
         </footer>
-
-      </div>
+       </div>
+       <figure class="featured-content__cards__small__image">
+        <a href="<?php the_permalink(); ?>">
+         <img src="<?php echo $thumbnail_image['sizes']['thumbnail']; ?>">
+        </a>
+       </figure>
+      </article>
+      <?php //endfor; ?>
+      <?php } while($i < $middle_max); ?>
+    <?php endif; wp_reset_postdata(); ?>
+   </div>
+  
+  <!-- medium card -->
+  <?php
+   if(count($featured_articles) >= 3):
+    $post = $featured_articles[$featured_count - 1];
+    setup_postdata($post);
+    
+    $title = get_the_title();
+    $thumbnail_image = get_field('image');
+    $sub_title = get_field('sub_title');
+    $content= get_the_content();
+    $author = get_field('author');
+    $time = get_the_time('M j, Y');
+    
+    if (strlen($sub_title) > 50):
+     $ellipsis_string_sub = substr($sub_title, 0, 100) . "...";
+    else:
+     $ellipsis_string_sub = $sub_title;
+    endif;
+  ?>
+   <div class="featured-content__cards__mediumContainer">
+    <article class="featured-content__cards__medium">
+     <figure class="featured-content__cards__medium__image">
+      <a href="<?php the_permalink(); ?>">
+       <img src="<?php echo $thumbnail_image['sizes']['thumbnail']; ?>">
+      </a>
+     </figure>
+     <div class="featured-content__cards__medium__details">
+      <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+       <h2 class="medium-title">
+        <?php echo $title ?>
+       </h2>
+      </a>
+      <p class="subtitle">
+       <?php echo $ellipsis_string_sub; ?>
+      </p>
+      
+      <footer>
+       <div class="footer-content">
+       <p> <a href="#"><?php echo $author; ?></a> in <a href="#">Place</a> </p>
+       <p class="add-details">
+        <a href="#"><?php echo $time; ?></a>
+       </p>
+       </div>
+      </footer>
+     </div>
     </article>
-
-    </div>
-  </section>
-
-  <!-- featured link below featured content -->
-  <div class="featured-link">
-    <a href="#">See All Featured ></a>
-  </div>
+   </div>
+  <?php endif; wp_reset_postdata(); ?>
+ </section>
+ <!-- featured link below featured content -->
+ <div class="featured-link">
+  <a href="#">See All Featured ></a>
+ </div>
 </div>
