@@ -1,0 +1,26 @@
+.inline-image__full {
+	
+	&__image-container {
+		width: 100%;
+		overflow: hidden;
+		margin: 0;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__image-caption {
+		margin-top: rem(10);
+		padding-right: rem(30);
+		padding-bottom: rem(10);
+		padding-left: rem(30);
+
+		p {
+			font-size: rem(14);
+			text-align: center;
+		}
+	}
+}

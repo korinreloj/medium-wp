@@ -1,0 +1,13 @@
+footer {
+	position: fixed;
+	bottom: 0;
+	background-color: #DDD;
+	z-index: 1;
+	width: 100%;
+	padding: 30px;
+	transition: transform 0.4s ease;	
+
+	&.is-hidden {
+		transform: translateY(78px);
+	}
+}
