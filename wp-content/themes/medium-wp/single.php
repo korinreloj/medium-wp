@@ -105,7 +105,7 @@
     }
   ?>
 
-<?php endwhile; ?>
+  <?php endwhile; ?>
 
 <?php endif; ?>
 

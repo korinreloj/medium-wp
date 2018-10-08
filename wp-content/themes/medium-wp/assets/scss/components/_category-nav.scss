@@ -1,0 +1,74 @@
+
+.category-nav{
+	//desktop breakpoint
+	width: 100vw;
+	height: rem(50);
+
+  	background-color: #fff;
+	//adjust margin when resized
+	// margin-left: auto;
+	// margin-right: auto;
+	display: flex;
+
+	position: relative;
+	text-align: center;
+
+	&__button{
+		a{
+			text-decoration: none;
+			color: $color-grey;
+		}
+		display: block;
+		margin-top: rem(14);
+		// padding-right: rem(10);
+		// padding-left: rem(20);
+		width: percentage(2/20);
+	}
+
+
+	&__links-ctr{
+		flex: 1;
+		overflow: hidden;
+		font-family: 'Open Sans', sans-serif;
+		font-size: rem(13);
+
+		@include desktop {
+			font-size: rem(13);
+		}
+
+		a, a:visited{
+			text-transform: uppercase;
+			text-decoration: none;
+			color: $color-grey;
+		}
+
+		a:first-child{
+			padding-left: 0;
+		}
+
+		a:hover{
+			color: $color-grey;
+		}
+
+	}
+	
+	&__track{
+		display: block;
+    transition: transform 0.2s ease;
+		.item{
+			padding-top: rem(15);
+			display: inline-block;
+			padding-left: rem(24);
+		}
+
+		.first{
+			padding-left: 0;
+		}
+	}	
+}
+
+
+
+
+
+
