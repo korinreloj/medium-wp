@@ -1,9 +1,9 @@
 <?php
-
-if(function_exists("register_field_group"))
-{
-	register_field_group(array (
-		'id' => 'acf_article-fields',
+​
+if( function_exists('acf_add_local_field_group') ):
+​
+	acf_add_local_field_group(array(
+		'key' => 'group_5b73df02b2fa0',
 		'title' => 'Article Fields',
 		'fields' => array(
 			array(
@@ -218,6 +218,7 @@ if(function_exists("register_field_group"))
 						'min' => '',
 						'max' => '',
 					),
+
 				),
 				'button_label' => 'Add Module',
 				'min' => '',
@@ -286,27 +287,28 @@ if(function_exists("register_field_group"))
 				'post_type' => array (
 					0 => 'all',
 				),
-				'allow_null' => 0,
-				'multiple' => 0,
+				'button_label' => 'Add Module',
+				'min' => '',
+				'max' => '',
 			),
 		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'page',
+		'location' => array(
+			array(
+				array(
+					'param' => 'post_type',
 					'operator' => '==',
-					'value' => '3',
-					'order_no' => 0,
-					'group_no' => 0,
+					'value' => 'post',
 				),
 			),
 		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'no_box',
-			'hide_on_screen' => array (
-			),
-		),
 		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => 1,
+		'description' => '',
 	));
-}
+	
+	endif;

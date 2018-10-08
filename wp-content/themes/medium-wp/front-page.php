@@ -2,6 +2,8 @@
 
 
 <?php
+  include 'category-nav.php';
+  include 'search.php';
   include 'featured-content.php';
 ?>
 

@@ -20,13 +20,24 @@
   <header class="header">
     <div class="header__content">
       <a class="header__link-left" href="#0">Become a member</a>
-      <h1>Medium</h1>
+      <h1><a id="headerTitle" href="<?php bloginfo('url'); ?>">Medium</a></h1>
 
       <div class="header__link">
-        <i class="fa fa-search"></i>
+
+
+        <form id = "search" action="<?php bloginfo('url'); ?>/wp-admin/admin-ajax.php?action=wpsearch">       
+
+          <i class="fa fa-search"></i>
+
+          <input type="text" name="searchText" class="header__search" placeholder="Search Medium">
+          <button class="submitSearch" type="Submit">Submit</button>
+
+        </form>
+
         <a class="header__link-right" href="#0">Sign in</a>
-       <button class="header__button">Get Started</button>
+        <button class="header__button">Get Started</button>
       </div>
     </div>
   </header>
+
   <main>

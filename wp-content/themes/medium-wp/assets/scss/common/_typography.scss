@@ -1,5 +1,6 @@
 $open-sans: 'Open Sans', sans-serif;
 $lora-serif: 'Lora', serif;
+$times: 'Times';
 
 $fonts: (
  open-sans: (
@@ -7,6 +8,9 @@ $fonts: (
  ),
  lora-serif: (
    default: '"Lora", serif'
+ ),
+ times: (
+   default: '"Times"'
  ),
 );
 
@@ -41,7 +45,7 @@ h2 {
   margin-top: rem(5);
   margin-bottom: rem(22);
   font-size: rem(30);
-  // font-weight: rem(400);
+  font-weight: rem(400);
   color: $color-grey;
 
   @include tablet {
@@ -120,6 +124,7 @@ a {
 }
 
 .title {
+
   font-size: rem(29);
   font-family: $open-sans;
   line-height: rem(35);
@@ -197,4 +202,3 @@ a {
   }
   
 }
-

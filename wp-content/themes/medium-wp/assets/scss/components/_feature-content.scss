@@ -133,30 +133,61 @@
 			}
 		}
 
-		footer p{
-			margin-top: rem(16);
-			margin-bottom: 0;
-			width: 143 / 320 * 100vw;
+		footer {
+			width: 184 / 320 * 100vw;
+			display: flex;
 
-			font-size: rem(13);
-			font-family: 'Open Sans', sans-serif;
-			color: $color-black;
-
-			@include tablet{
-				width: 304 / 760 * 100vw;
-				font-size: rem(15);
+			.footer-content{
+				padding-right: rem(16);
+				a{
+					font-size: rem(16);
+					font-family: 'Open Sans', sans-serif;
+					color: $color-black;
+				}
 			}
 
-			@include desktop{
-				width: 275 / 1020 * 100vw;
+			p{
+				margin-top: rem(16);
+				margin-bottom: 0;
+				width: 143 / 320 * 100vw;
+
+				font-size: rem(13);
+				font-family: 'Open Sans', sans-serif;
+				color: $color-black;
+
+				@include tablet{
+					width: 304 / 760 * 100vw;
+					font-size: rem(15);
+				}
+
+				@include desktop{
+					width: 275 / 1020 * 100vw;
+				}
+
+				a, a:visited{
+					text-decoration: none;
+					color: $color-black;
+
+				}
+
+				a:hover{
+					text-decoration: underline;
+					color: $color-black;
+
+				}
 			}
 
-			a, a:visited{
-				text-decoration: none;
-			}
+			.add-details{
+				margin-top: rem(4);
+				font-size: rem(13);
+				font-family: 'Open Sans', sans-serif;
+				color: $color-grey;
+				letter-spacing: rem(-0.42);
 
-			a:hover{
-				text-decoration: underline;
+				a, a:hover, a:visited{
+					text-decoration: none;
+					color: $color-grey;
+				}
 			}
 		}
 	}
@@ -233,7 +264,7 @@
 
 		.subtitle{
 			margin-top: rem(2);
-			margin-bottom: rem(12);
+			margin-bottom: 0;
 			width: 184 / 320 * 100vw;
 
 			font-size: rem(14);
@@ -251,34 +282,66 @@
 			}
 		}
 
-		footer p{
-			// margin-top: rem(16);
+		.without-sub{
 			margin-bottom: 0;
-			width: 143 / 320 * 100vw;
-
-			font-size: rem(13);
-			font-family: 'Open Sans', sans-serif;
-			color: $color-black;
-
-			@include tablet{
-				padding-left: 0;
-				width: 240/760 * 100vw;
-				margin-top: rem(16);
-			}
-
-			@include desktop{
-				width: 265 / 1020 * 100vw;
-			}
-
-			a, a:visited{
-				text-decoration: none;
-			}
-
-			a:hover{
-				text-decoration: underline;
-			}
 		}
 
+		footer {
+			width: 264 / 320 * 100vw;
+			display: flex;
+
+			.footer-content{
+				padding-right: rem(16);
+				a{
+					font-size: rem(13);
+					font-family: 'Open Sans', sans-serif;
+					color: $color-black;
+				}
+			}
+
+			p{
+				// margin-top: rem(16);
+				margin-bottom: 0;
+				width: 143 / 320 * 100vw;
+
+				font-size: rem(13);
+				font-family: 'Open Sans', sans-serif;
+				color: $color-black;
+
+				@include tablet{
+					padding-left: 0;
+					width: 240/760 * 100vw;
+					margin-top: rem(16);
+				}
+
+				@include desktop{
+					width: 265 / 1020 * 100vw;
+				}
+
+				a, a:visited{
+					text-decoration: none;
+					color: $color-black;
+				}
+
+				a:hover{
+					text-decoration: underline;
+					color: $color-black;
+				}
+			}
+
+			.add-details{
+				margin-top: rem(4);
+				font-size: rem(13);
+				font-family: 'Open Sans', sans-serif;
+				color: $color-grey;
+				letter-spacing: rem(-0.42);
+
+				a, a:hover, a:visited{
+					text-decoration: none;
+					color: $color-grey;
+				}
+			}
+		}
 	}
 
 	&__cards__small__image{
@@ -287,6 +350,8 @@
 		margin-bottom: rem(16);
 		width: 80 / 320 * 100vw;
 		min-height: rem(80);
+		max-height: rem(80);
+
 		@include aspect-ratio(80, 80);
 		flex: 1;
 
@@ -356,20 +421,44 @@
 			}
 
 			footer{
-				font-size: rem(14);
-				font-family: 'Open Sans', sans-serif;
-				color: $color-black;
+
+				.footer-content{
+					font-size: rem(15);
+					a{
+						font-size: rem(15);
+						font-family: 'Open Sans', sans-serif;
+						color: $color-black;
+					}
+				}
 
 				a, a:visited{
 					text-decoration: none;
+					color: $color-black;
 				}
 
 				a:hover{
 					text-decoration: underline;
+					color: $color-black;
+				}
+
+				.add-details{
+					margin-top: rem(4);
+					font-size: rem(13);
+					font-family: 'Open Sans', sans-serif;
+					color: $color-grey;
+					letter-spacing: rem(-0.42);
+
+					a, a:hover, a:visited{
+						text-decoration: none;
+						color: $color-grey;
+					}
+				}
+
+				p{
+					margin-bottom: 0;
 				}
 			}
 		}
-
 	}
 
 
