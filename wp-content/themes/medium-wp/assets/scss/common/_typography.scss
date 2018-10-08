@@ -205,4 +205,30 @@ a {
   }
 }
 
+.header_content{
+  .header_text{
+    font-size: rem(25);
+    font-family: $open-sans;
+
+    padding-right: rem(20);
+    padding-left: rem(20);
+    margin-top: rem(28);
+    margin-bottom: rem(8);
+
+    @include tablet{
+      margin-left: rem(10);
+      margin-right: rem(10);
+    }
+
+    @include desktop{
+      font-size: rem(29);
+      padding-top: 0;
+      margin-top: rem(56);
+      margin-bottom: rem(-27);
+      margin-left: rem(140);
+      margin-right: rem(140);
+    }  
+  }
+  
+}
 
