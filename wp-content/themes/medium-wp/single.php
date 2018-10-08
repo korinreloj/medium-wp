@@ -64,7 +64,6 @@
           </div>
         <?php break;?>
           
-     
         <?php case 'code_block':?>
           <div class="code_block">
             <?php the_sub_field('code_block');?>
@@ -103,4 +102,5 @@
 
   include 'related-content.php';
   get_footer(); ?>
+
 </div>
