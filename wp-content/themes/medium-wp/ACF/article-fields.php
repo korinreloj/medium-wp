@@ -218,6 +218,74 @@ if( function_exists('acf_add_local_field_group') ):
 						'min' => '',
 						'max' => '',
 					),
+
+				),
+				'button_label' => 'Add Module',
+				'min' => '',
+				'max' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+				0 => 'the_content',
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_breaker',
+		'title' => 'Breaker',
+		'fields' => array (
+			array (
+				'key' => 'field_5b694ad065126',
+				'label' => 'Breaker Title',
+				'name' => 'breaker_title',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5b693c5664833',
+				'label' => 'Breaker Image',
+				'name' => 'breaker_image',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'full',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_5b693d3064835',
+				'label' => 'Description',
+				'name' => 'description',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+			array (
+				'key' => 'field_5b693cc464834',
+				'label' => 'CTA Link',
+				'name' => 'cta_link',
+				'type' => 'page_link',
+				'post_type' => array (
+					0 => 'all',
 				),
 				'button_label' => 'Add Module',
 				'min' => '',

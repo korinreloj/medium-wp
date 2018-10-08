@@ -1,4 +1,5 @@
 <?php
+
  global $post;
  $featured_articles = get_field('featured_articles');
  $featured_count = count($featured_articles);

@@ -21,6 +21,7 @@ window.addEventListener('scroll', () => {
 
 
 //carousel navbar
+
 // get all the necessary variables needed
 const prevBtn = document.querySelector('.btn-left');
 const nextBtn = document.querySelector('.btn-right');
@@ -28,7 +29,6 @@ const trackContainer = document.querySelector('.category-nav__links-ctr');
 const track = document.querySelector('.category-nav__track');
 
 let containerWidth = trackContainer.getBoundingClientRect().width;
-
 
 // compute the width of the track
 const items = Array.from(track.querySelectorAll('.item'));
@@ -62,7 +62,7 @@ function goToPrev() {
 
 function goToNext() {
   let offset = getTrackOffset() - containerWidth;
-  
+
   //value is negative so that it will move to the left
   if (Math.abs(offset) < bound) {
     track.style.transform = `translateX(${offset}px)`;
@@ -87,3 +87,4 @@ window.addEventListener('resize', () => {
   //go back to 0 position
   track.style.transform = 'translateX(0)';
 });
+
