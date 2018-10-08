@@ -5,20 +5,15 @@
 
   <nav class="category-nav__links-ctr">
     <div class ="category-nav__track">
-    	<div class = "item first"><a href="#">Home</a></div>
-    	<div class = "item"><a href="#">Great</a></div>
-      <div class = "item"><a href="#">Culture</a></div>
-      <div class = "item"><a href="#">Tech</a>	</div>
-      <div class = "item"><a href="#">Entrepreneurship</a></div>
-      <div class = "item"><a href="#">Self</a></div>
-      <div class = "item"><a href="#">Politics</a></div>
-      <div class = "item"><a href="#">Design</a></div>
-      <div class = "item"><a href="#">Science</a></div>
-      <div class = "item"><a href="#">Popular</a></div>
-      <div class = "item"><a href="#">More</a></div>
+      <div class = "item first"><a href="#">Home</a></div>
+      <?php
+        $categories = get_categories();
+        foreach($categories as $category):
+          echo '<div class = "item"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></div>';
+        endforeach;
+      ?>
     </div>
   </nav>
-
   <div class = "category-nav__button">
     <a href="#" class="btn btn-right">></a>
   </div>

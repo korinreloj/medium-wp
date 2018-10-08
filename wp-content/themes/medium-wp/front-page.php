@@ -1,6 +1,8 @@
 <?php get_header(); ?>
-
-<?php wp_list_categories(); ?>
+<br><br>
+<?php 
+  include 'category-nav.php';
+?>
 
 <?php
   include 'featured-content.php';

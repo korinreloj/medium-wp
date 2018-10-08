@@ -1,6 +1,9 @@
 <section class="main-feed">
 
-<?php ?>
+<?php $qo = get_queried_object(); query_posts([ 
+    'posts_per_page' => 2, // number of posts that will be displayed
+    'category_name' => $qo->slug,
+  ]); ?>
 
   <div class="main-feed__nav">
     <div class="main-feed__heading">
