@@ -11,7 +11,7 @@
 if( $author_ID && $profile ): 
 ?>
 
-    <p><a href="<?php the_permalink($profile_id); ?>"><?php echo $author; ?></a></p>
+    <p><?php echo $author; ?></p>
 	<?php echo "$age $birthplace $profession"; ?>
 
 	<div class="description">
