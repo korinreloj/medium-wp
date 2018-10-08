@@ -1,6 +1,4 @@
-<?php
-  //include 'single.php';
-?>
+<?php include 'author.php'; ?>
 
 <?php get_header(); if(have_posts()): the_post(); ?>
 
