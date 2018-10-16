@@ -54,9 +54,17 @@
   <article class="main-feed__container">
   	<div class="main-feed__content">
 
-  	<h2 class="main-feed__title">How Fake Influence Campaigns on Facebook Lured Real People</h2>
-  	<p>Activists became entangled with fake accounts and pages on Facebook, leading to significant consequences for them as the company tried to..</p>
-  </div>
+      <div class="main-feed__details-container">
+        <div class="main-feed__author-content">
+          <p class="main-feed__author"><?php echo $author; ?> in <a class="main-feed__place" href="#"><?php include 'p-category.php'; ?></a></p>
+          <p class="main-feed__sub">
+            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+              <?php echo $time; ?>
+            </a>
+          </p>
+        </div>
+      </div>  
+    </div>
 
   	<img src="https://cdn-images-1.medium.com/focal/152/156/52/47/1*7L0V3I60ROF_lvvqzoWDVw.jpeg">
   </article>

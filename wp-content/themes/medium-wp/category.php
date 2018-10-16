@@ -7,7 +7,7 @@
 
   <div class="main-feed__nav">
     <div class="main-feed__heading">
-      <h3 class="main-feed__header-title">Recent Posts</h3>
+      <h3 class="main-feed__header-title">LATEST</h3>
     </div>
   </div>
    
