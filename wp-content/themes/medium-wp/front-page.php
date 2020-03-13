@@ -1,5 +1,8 @@
 <?php get_header(); ?>
-
+<br><br>
+<?php 
+  include 'category-nav.php';
+?>
 
 <?php
   include 'featured-content.php';

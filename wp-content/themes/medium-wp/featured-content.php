@@ -20,8 +20,8 @@
         $author = get_field('author');
         $time = get_the_time('M j, Y');
 
-        if (strlen($sub_title) > 50):
-          $ellipsis_string_sub = substr($sub_title, 0, 100) . "...";
+        if (strlen($sub_title) > 43):
+          $ellipsis_string_sub = substr($sub_title, 0, 43) . "...";
         else:
           $ellipsis_string_sub = $sub_title;
         endif;
@@ -30,7 +30,7 @@
       <article class="featured-content__cards__large">
         <figure class="featured-content__cards__large__image">
           <a href="<?php the_permalink(); ?>">
-            <img src="<?php echo $thumbnail_image['sizes']['thumbnail']; ?>">
+            <img src="<?php echo $thumbnail_image['url']; ?>">
           </a>
         </figure>
         <div class="featured-content__cards__large__details">
@@ -73,36 +73,44 @@
               $author = get_field('author');
               $time = get_the_time('M j, Y');
 
-
-              if (strlen($sub_title) > 50):
-                $ellipsis_string_sub = substr($sub_title, 0, 100) . "...";
-              else:
-                $ellipsis_string_sub = $sub_title;
+              if (strlen($sub_title) > 43):
+                $subtitle = substr($sub_title, 0, 43) . "...";
               endif;
+              
         ?>
         
             <article class="featured-content__cards__small">
               <div class="featured-content__cards__small__details">
                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                <?php
-                  if ($sub_title != ""):
-                  ?>
-                  <h3 class ="small-title">
-                    <?php echo $title ?>
-                  </h3>
-                </a>
-                  <p class="subtitle">
-                    <?php echo $ellipsis_string_sub; ?>
-                  </p>
+
                   <?php
-                  else:
-                ?>
+                    if (strlen($title) > 43): ?>
+                    <h3 class ="small-title">
+                      <?php echo $title ?>
+                    </h3>
+                      <?php $sub_title = "";
+                      echo $sub_title; ?>
+                  
+                  <?php
+                    elseif ($sub_title != ""):
+                    ?>
+                    <h3 class ="small-title">
+                      <?php echo $title ?>
+                    </h3>
+                  </a>
+                    <p class="subtitle">
+                      <?php echo $subtitle; ?>
+                    </p>
+                    <?php
+                    elseif ($sub_title == NULL):
+                  ?>
                     <h3 class ="small-title without-sub">
                       <?php echo $title ?>
                     </h3>
-                <?php
-                  endif;
-                ?>
+                      
+                  <?php
+                    endif;
+                  ?>
 
                 <footer>
                   <div class="footer-content">
@@ -116,7 +124,7 @@
 
               <figure class="featured-content__cards__small__image">
                 <a href="<?php the_permalink(); ?>">
-                  <img src="<?php echo $thumbnail_image['sizes']['thumbnail']; ?>">
+                  <img src="<?php echo $thumbnail_image['url']; ?>">
                 </a>
               </figure>
             </article>
@@ -138,8 +146,8 @@
         $author = get_field('author');
         $time = get_the_time('M j, Y');
         
-        if (strlen($sub_title) > 50):
-          $ellipsis_string_sub = substr($sub_title, 0, 100) . "...";
+        if (strlen($sub_title) > 43):
+          $ellipsis_string_sub = substr($sub_title, 0, 43) . "...";
         else:
           $ellipsis_string_sub = $sub_title;
         endif;
@@ -149,7 +157,7 @@
         <article class="featured-content__cards__medium">
           <figure class="featured-content__cards__medium__image">
             <a href="<?php the_permalink(); ?>">
-              <img src="<?php echo $thumbnail_image['sizes']['thumbnail']; ?>">
+              <img src="<?php echo $thumbnail_image['url']; ?>">
             </a>
           </figure>
           <div class="featured-content__cards__medium__details">
